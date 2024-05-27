@@ -34,20 +34,20 @@ const Projects =React.forwardRef((props,ref) => {
           <button
           
           onClick={() => setTechDomain('All')}
-           className='  px-6  shadow-lg  rounded-md  bg-[#6c63ff] text-white  text-lg cursor-pointer hover:bg-[#EF8EB4]'>
+           className='  px-6  shadow-lg  rounded-md  border border-[#6c63ff] text-black text-lg cursor-pointer hover:bg-[#6c63ff] hover:text-white'>
             All
           </button>
 
           <button 
           onClick={() =>{ setTechDomain('Web'); 
         }}
-          className=' px-6 py-2 shadow-lg rounded-md border-2 bg-[#6c63ff] text-white text-lg cursor-pointer hover:bg-[#EF8EB4]'>
+          className=' px-6 py-2 shadow-lg rounded-md border border-[#6c63ff] text-black text-lg cursor-pointer hover:bg-[#6c63ff] hover:text-white'>
             Web
           </button>
 
           <button
            onClick={() =>{ setTechDomain('AI')}}
-           className=' px-6 py-2 shadow-lg rounded-md border-2 bg-[#6c63ff] text-white  text-lg cursor-pointer hover:bg-[#EF8EB4]'>AI</button>
+           className=' px-6 py-2 shadow-lg rounded-md border border-[#6c63ff] text-black  text-lg cursor-pointer hover:bg-[#6c63ff] hover:text-white'>AI</button>
         </div>
         <div className='mx-auto  grid grid-flow-row auto-rows-auto  sm:grid-cols-2  place-items-center md:grid-cols-3 lg:grid-cols-4 gap-4'>
         {projects.map((project) =>{  
