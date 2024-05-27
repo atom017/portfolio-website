@@ -3,7 +3,7 @@ import emailjs from 'emailjs-com';
 import {FaEnvelope, FaFacebook, FaGithub, FaLinkedin, FaPhone, FaTelegram, FaWhatsapp} from 'react-icons/fa'
 
 
-const Contact = () => {
+const Contact = React.forwardRef((props,ref) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState(null);
   const sendEmail = (e) => {
@@ -39,16 +39,21 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className='p-3 '>
-      <h2 className='  text-3xl font-bold mb-3 '>Contact Me</h2>
-      <div className=" md:flex px-4 mx-auto md:justify-between  space-x-10 p-10 ">
+    <section ref={ref} id="contact" className='p-3 '>
+      <h2 className=' font-bricolage text-4xl md:text-5xl font-bold mb-3 px-10'>Keep In Touch</h2>
+      <div className="  flex flex-col-reverse md:flex md:flex-row  px-4 mx-auto md:justify-between  space-x-10 p-10 ">
      
-        <div className=' md:border-r px-5 py-3'>
-          <p className=' mb-5'>Reach out to me now</p>
-          <p className=' mb-3'><FaEnvelope className='inline-block mr-2'/>khaing.hsu.thwe.dev@gmail.com</p>
-          <p className=' mb-3'><FaPhone className='inline-block mr-2'/>+959769868633</p>
-          <p className=' mb-3'><FaWhatsapp className='inline-block mr-2'/>khaing.hsu.thwe.dev@gmail.com</p>
-           
+        <div className=' md:border-r px-5 py-6 max-w-[1/2]'>
+          <p className=' mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit sint distinctio temporibus?</p>
+          <p className=' mb-3'><FaEnvelope className='inline-block mr-2 text-[#5A2FFB]'/>khaing.hsu.thwe.dev@gmail.com</p>
+          {/* <p className=' mb-3'><FaPhone className='inline-block mr-2 text-[#FF90BC]'/>+959769868633</p>
+          <p className=' mb-3'><FaWhatsapp className='inline-block mr-2 text-[#FF90BC]'/>khaing.hsu.thwe.dev@gmail.com</p>
+            */}
+            <div className='flex py-2'>
+              <FaLinkedin className='mr-3 inline-block text-4xl text-[#6c63ff]'/>
+              <FaGithub className='mr-3 inline-block text-4xl text-[#6c63ff]'/>
+              <FaTelegram className='mr-3 inline-block text-4xl text-[#6c63ff]'/>
+            </div>
         </div>
 
         <div className='md:w-[50%] lg:w-[60%] ' onSubmit={sendEmail}>
@@ -70,7 +75,7 @@ const Contact = () => {
               <textarea id="message" name="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave your message..."></textarea>
             </div>
           
-            <button type="submit" className="text-white bg-[#FF90BC] hover:bg-[#EF8EB4] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 " disabled={isSubmitting}>Send</button>
+            <button type="submit" className="text-white bg-[#6c63ff] hover:bg-[#EF8EB4] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 " disabled={isSubmitting}>Send</button>
             {stateMessage && <p>{stateMessage}</p>}
           </form>
         </div>
@@ -79,5 +84,5 @@ const Contact = () => {
     </section>
   )
 }
-
+)
 export default Contact

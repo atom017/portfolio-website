@@ -14,9 +14,18 @@ export default {
     // colors:{
     //   secondary:'#40A2E3',
     //   primary:'#0D9276',
-    //   pale:'#FFF6E9'
+    //   pale:'#FFF6E9'#FF90BC
     // },
-    extend: {},
+    extend: {
+      fontFamily: {
+        'manrope': 'Manrope',
+        'circular': 'Circular std',
+        'roboto': 'Roboto',
+        'poppins':['Poppins'],
+        'gidugu':['Gidugu'],
+        'bricolage':['Bricolage Grotesque','sans']
+      }
+    },
   },
   plugins: [],
 }

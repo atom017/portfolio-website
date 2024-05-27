@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import {AiOutlineClose} from 'react-icons/ai'
 import {FaBars} from 'react-icons/fa'
-import logo from '../assets/KHT_3.png'
 import {motion} from 'framer-motion'
 
-const Navbar = () => {
+const Navbar = ({scrollTo}) => {
   const [toggle,setToggle] = useState(false)
   function openMenu(){
     setToggle(true)
@@ -13,48 +12,73 @@ const Navbar = () => {
     setToggle(false)
   }
 
+  
+
   const nav_items=[
-    {
-    title:'Home',
-    link:'#home'
-    },
+    
     {
       title:'About',
-      link:'#about'
+      link:'about'
       },
     {
       title:'Projects',
-      link:'#projects'
+      link:'projects'
     },
     {
       title:'Experiences',
-      link:'#experiences'
+      link:'experience'
       },
       {
+        title:'Services',
+        link:'service'
+        },
+  
+      {
         title:'Contact',
-        link:'#contact'
+        link:'contact'
         },
   ]
 
   return (
     <>
-    <nav className=' py-4 px-5 flex items-center justify-between lg:flex-row mx-auto shadow-lg'>
+    <nav className='w-full py-4 px-5  flex items-center justify-between lg:flex-row mx-auto shadow-lg'>
    
         <div className='h-10 w-10'>
-        <img className='rounded-full shadow-lg' src={logo} alt="" />
+          <span className='text-gray-500 font-mono'>khaig.hsu.thwe.dev@gmail.com</span>
+        {/* <img className='rounded-full shadow-lg' src={logo} alt="" /> */}
         </div>
         <div className='space-x-4 '>
-          <div className='hidden  sm:inline-flex space-x-2'>
-            {nav_items.map((item,index) =>{
-              return (
-                <a key={index}
-                href={item.link}
-                className="relative cursor-pointer mr-1  text-xl w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
-                >{item.title}</a>
-              )
-            })}
-          
-          </div>
+
+          <ul className='hidden sm:flex font-mono'>
+          <li 
+          className="mr-6 relative cursor-pointer text-gray-500  text-sm md:text-lg  block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#6c63ff] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+           onClick={() => scrollTo('about')}>
+          About
+        </li>
+        
+        <li 
+        className="mr-6 relative cursor-pointer text-gray-500  text-sm md:text-lg  block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#6c63ff] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+         onClick={() => scrollTo('projects')}>
+          Projects
+        </li>
+
+        <li className="mr-6 relative cursor-pointer text-gray-500  text-sm md:text-lg  block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#6c63ff] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+         onClick={() => scrollTo('experience')}>
+          Experience
+        </li>
+
+        <li className="mr-6 relative cursor-pointer text-gray-500  text-sm md:text-lg  block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#6c63ff] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+         onClick={() => scrollTo('service')}>
+          Service
+        </li>
+
+        <li 
+        className="mr-6 relative cursor-pointer text-gray-500  text-sm md:text-lg  block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#6c63ff] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+         onClick={() => scrollTo('contact')}>
+          Contact
+        </li>
+
+          </ul>
 
           <div className='ssm:block sm:hidden'>
             {toggle ? (
@@ -62,7 +86,6 @@ const Navbar = () => {
             ): (
               <FaBars onClick={openMenu} size={30} className=' cursor-pointer'/>
             )}
-            
             
           </div>
   
@@ -90,6 +113,10 @@ const Navbar = () => {
                       damping: 20,
                       delay: 0.1 + index / 10,
                     }}
+                    onClick={() =>{
+                      scrollTo(item.link);
+                      closeMenu();
+                    } }
                     className=' px-4 py-3 text-white   cursor-pointer  hover:bg-slate-500 underline-offset-4  text-lg'>
                     {item.title}
                     </motion.li>
