@@ -19,7 +19,7 @@ const projects_data  =[
     },
     {
         "id":3,
-        "image":"UI image.png",
+        "image":"https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?auto=compress&cs=tinysrgb&w=600",
         "name":"Heart Disease Prediction",
         "source":"",
         "demo":"",
@@ -28,7 +28,7 @@ const projects_data  =[
     },
     {
         "id":4,
-        "image":"",
+        "image":"https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?auto=compress&cs=tinysrgb&w=600",
         "name":"Alpaca Image Generator",
         "source":"",
         "demo":"",
@@ -37,8 +37,8 @@ const projects_data  =[
     },
     {
         "id":5,
-        "image":"",
-        "name":"Alpaca Image Generator",
+        "image":"https://images.pexels.com/photos/1006293/pexels-photo-1006293.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "name":"Blog Website",
         "source":"",
         "demo":"",
         "type":"Web",
@@ -46,7 +46,7 @@ const projects_data  =[
     },
     {
         "id":6,
-        "image":"",
+        "image":"https://images.pexels.com/photos/434337/pexels-photo-434337.jpeg?auto=compress&cs=tinysrgb&w=600",
         "name":"Alpaca Image Generator",
         "source":"",
         "demo":"",
