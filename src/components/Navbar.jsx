@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect} from 'react'
 import {AiOutlineClose} from 'react-icons/ai'
 import {FaBars} from 'react-icons/fa'
 import {motion} from 'framer-motion'
@@ -39,9 +39,34 @@ const Navbar = ({scrollTo}) => {
         },
   ]
 
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Determine the active section based on scroll position
+      const sections = ['about', 'projects', 'experience', 'service', 'contact'];
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element && element.offsetTop <= scrollPosition && element.offsetTop + element.offsetHeight > scrollPosition) {
+          setActiveSection(section);
+          break;
+        }
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Clean up on unmount
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
   return (
     <>
-    <nav className='w-full py-4 px-5  flex items-center justify-between lg:flex-row mx-auto shadow-lg'>
+    <nav className='sm:fixed sm:top-0 sm:z-10 w-full py-4 px-5  flex items-center justify-between lg:flex-row mx-auto shadow-lg bg-white'>
    
         <div className='h-10 w-10'>
           <span className='text-gray-500 font-mono'>khaig.hsu.thwe.dev@gmail.com</span>
@@ -50,7 +75,15 @@ const Navbar = ({scrollTo}) => {
         <div className='space-x-4 '>
 
           <ul className='hidden sm:flex font-mono'>
-          <li 
+          {nav_items.map((item, index) => (
+              <li 
+                key={index}
+                className={`mr-6 relative cursor-pointer text-gray-500 text-sm md:text-lg block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#6c63ff] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${activeSection === item.link ? 'after:bg-[#6c63ff]' : ''} ${activeSection === item.link ? 'font-bold' : ''}` }
+                onClick={() => scrollTo(item.link)}>
+                {item.title}
+              </li>
+            ))}
+          {/* <li 
           className="mr-6 relative cursor-pointer text-gray-500  text-sm md:text-lg  block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#6c63ff] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
            onClick={() => scrollTo('about')}>
           About
@@ -76,7 +109,7 @@ const Navbar = ({scrollTo}) => {
         className="mr-6 relative cursor-pointer text-gray-500  text-sm md:text-lg  block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#6c63ff] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
          onClick={() => scrollTo('contact')}>
           Contact
-        </li>
+        </li> */}
 
           </ul>
 
@@ -118,6 +151,7 @@ const Navbar = ({scrollTo}) => {
                       closeMenu();
                     } }
                     className=' px-4 py-3 text-white   cursor-pointer  hover:bg-slate-500 underline-offset-4  text-lg'>
+                    
                     {item.title}
                     </motion.li>
                   )
