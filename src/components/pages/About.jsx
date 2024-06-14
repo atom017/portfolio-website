@@ -18,7 +18,7 @@ const About = React.forwardRef((props,ref)=> {
   return (
     <section ref={ref} id="about" className='relative flex  flex-col  items-center   mx-auto  px-4 py-2 md:w-[90%] '>
       <h2 className='font-bricolage text-center  text-4xl md:text-5xl mb-10 text-[#6c63ff] font-bold'>
-        About <FaUser className='inline-flex text-[#6c63ff]'/>
+        About Me<FaUser className='inline-flex text-[#6c63ff]'/>
         </h2>
         <div className='relative flex flex-col justify-center  py-2 px-1 h-full  space-x-4 '>
           <div className='relative p-5 bg-[#CAF4FF] mb-5  flex flex-col   '>

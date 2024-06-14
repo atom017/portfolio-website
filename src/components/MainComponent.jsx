@@ -47,10 +47,10 @@ const MainComponent = () => {
         targetRef = experienceRef;
         break;
       case 'projects':
-        targetRef = serviceRef;
+        targetRef = projectsRef;
         break;
       case 'service':
-        targetRef = projectsRef;
+        targetRef = serviceRef;
         break;
       case 'contact':
         targetRef = contactRef;
