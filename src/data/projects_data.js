@@ -1,9 +1,10 @@
+//import {image} from "../assets/projects/"
 const projects_data  =[
     {
         "id":1,
-        "image":"https://plus.unsplash.com/premium_photo-1705583864718-71cdbb830c79?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image":"../../../public/assets/projects/UI Image.png",
         "name":"Burmese Alphabet Recognition System",
-        "source":"",
+        "source":"https://github.com/atom017/Burmese-Alphabet-Recognition-System",
         "demo":"",
         "type":"AI",
         "tech_stack":['Python','Tensorflow']
