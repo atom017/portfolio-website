@@ -32,7 +32,7 @@ const Project = ({project}) => {
 //   )
 return (
 
-<div class="relative rounded-sm overflow-hidden group">
+<div class="relative rounded-sm  overflow-hidden group">
   <img class="w-full h-full object cover" src={project.image} alt="Project Image"/>
   <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-400"></div>
   <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400">
@@ -40,7 +40,7 @@ return (
       <h3 class="text-white text-2xl font-bold mb-4">{project.name}</h3>
       <div class="flex justify-center space-x-4">
         <a href="#" class="px-3 py-2 rounded text-white bg-blue-500 hover:bg-blue-600 transition-colors duration-400 ease-in-out">Preview</a>
-        <a href="#" class="px-3 py-2 rounded text-white bg-gray-700 hover:bg-gray-800 transition-colors duration-400 ease-in-out">Source Code</a>
+        <a href={project.source} class="px-3 py-2 rounded text-white bg-gray-700 hover:bg-gray-800 transition-colors duration-400 ease-in-out">Source Code</a>
       </div>
     </div>
   </div>
