@@ -1,6 +1,6 @@
 import React from 'react'
 import {BsFacebook,BsTwitter,BsLinkedin,BsTelegram} from 'react-icons/bs'
-import portfolio from '../../assets/portfolio.svg';
+import portfolio from '../../../public/assets/portfolio.svg';
 
 const Hero = () => {
 
