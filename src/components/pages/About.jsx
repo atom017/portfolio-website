@@ -13,6 +13,7 @@ import MongoDB from '../../../public/assets/skills/MongoDB.svg'
 import ReactJs from '../../../public/assets/skills/React-Light.svg'
 import { motion } from 'framer-motion';
 import profile_chatbot from '../../../public/assets/profile_chatbot.svg';
+import SkillsCarousel from '../SkillsCarousel'
 
 const About = React.forwardRef((props, ref) => {
   return (
@@ -20,27 +21,13 @@ const About = React.forwardRef((props, ref) => {
       <h2 className='font-bricolage text-center  text-4xl md:text-5xl mb-10 text-[#6c63ff] font-bold'>
         About Me<FaUser className='inline-flex text-[#6c63ff]' />
       </h2>
-      <div className='relative flex flex-col justify-center  py-2 px-1 h-full  space-x-4 '>
-        <div className='relative p-5 bg-[#CAF4FF] mb-5  flex flex-col   '>
+      <div className='relative flex flex-col justify-center  w-full h-full  space-x-4 '>
+        <div className='relative p-5 bg-[#CAF4FF] mb-5  flex flex-col justify-center  '>
           {/* <h5 className=' text-xl mb-2 text-center'>Welcome!</h5> */}
           <p className='mb-5 py-2 text-md md:text-lg  text-slate-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Ipsa enim recusandae excepturi
             quas assumenda nulla nostrum esse nihil totam distinctio!
           </p>
-
-          <div className='flex flex-wrap py-3'>
-            <p className='inline-block text-sm md:text-md text-slate-400 mr-7'>Tech Stack</p>
-            <img src={JavaScript} className='w-[20px] h-[20px] mr-2 inline-block' />
-            <img src={Python} className='w-[20px] h-[20px] mr-2  inline-block' />
-            <img src={ReactJs} className='w-[20px] h-[20px] mr-2 inline-block' />
-            <img src={Nodejs} className='w-[20px] h-[20px] mr-2 inline-block' />
-            <img src={Flask} className='w-[20px] h-[20px] mr-2 inline-block' />
-            <img src={Django} className='w-[20px] h-[20px] mr-2 inline-block' />
-            <img src={Tensorflow} className='w-[20px] h-[20px] mr-2 inline-block' />
-            <img src={MongoDB} className='w-[20px] h-[20px] mr-2 inline-block' />
-            <img src={MySQL} className='w-[20px] h-[20px] mr-2 inline-block' />
-            <img src={PostgreSQL} className='w-[20px] h-[20px] mr-1 justify-center inline-block' />
-          </div>
 
           <div className='relative self-center w-fit'>
             <motion.svg animate={{ rotate: 360 }} transition={{ duration: 10, delay: 0.2, repeat: Infinity, ease: "linear" }}
@@ -65,14 +52,18 @@ const About = React.forwardRef((props, ref) => {
 
         </div>
 
-
-        <div className='relative self-center my-20'>
-          <img src={profile_chatbot}
-            className='self-center md:max-w-[500px]' alt="" />
+        <div className='w-full mt-10'>
+          <h2 className='font-bold text-lg md:text-xl font-bricolage'>Tech Stack</h2>
+          <SkillsCarousel />
         </div>
 
-      </div>
 
+
+      </div>
+      <div className='relative self-center my-20'>
+        <img src={profile_chatbot}
+          className='self-center md:max-w-[500px]' alt="" />
+      </div>
     </section>
   )
 }
