@@ -40,20 +40,42 @@ const Contact = React.forwardRef((props, ref) => {
 
   return (
     <section ref={ref} id="contact" className='mx-auto px-10 py-8 mb-10 ' >
-      <h2 className=' font-bricolage text-4xl md:text-5xl font-bold mb-3 '>Keep In Touch</h2>
+      <h2 className=' font-bricolage text-4xl md:text-5xl font-bold mb-3 text-[#6c63ff] '>Keep In Touch</h2>
       <div className="flex flex-col-reverse md:flex md:flex-row  mx-auto md:justify-between  md:space-x-10  ">
 
         <div className=' md:border-r  py-6 max-w-[1/2] '>
           <p className=' mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit sint distinctio temporibus?</p>
-          <p className=' mb-3'><FaEnvelope className='inline-block mr-2 text-[#5A2FFB]' />khaing.hsu.thwe.dev@gmail.com</p>
+          <p className=' mb-3'><FaEnvelope className='inline-block mr-2 text-[#6c63ff]' />khaing.hsu.thwe.dev@gmail.com</p>
           {/* <p className=' mb-3'><FaPhone className='inline-block mr-2 text-[#FF90BC]'/>+959769868633</p>
           <p className=' mb-3'><FaWhatsapp className='inline-block mr-2 text-[#FF90BC]'/>khaing.hsu.thwe.dev@gmail.com</p>
             */}
           <div className='flex py-2'>
-            <FaLinkedin className='mr-3 inline-block text-4xl text-[#6c63ff]' />
-            <FaGithub className='mr-3 inline-block text-4xl text-[#6c63ff]' />
-            <FaTelegram className='mr-3 inline-block text-4xl text-[#6c63ff]' />
+            <a
+              href="https://www.linkedin.com/in/khaing-hsu-thwe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className='mr-3'
+            >
+              <FaLinkedin className='text-4xl text-[#6c63ff]' />
+            </a>
+            <a
+              href="https://github.com/your-username"
+              target="_blank"
+              rel="noopener noreferrer"
+              className='mr-3'
+            >
+              <FaGithub className='text-4xl text-[#6c63ff]' />
+            </a>
+            <a
+              href="https://t.me/your-username"
+              target="_blank"
+              rel="noopener noreferrer"
+              className='mr-3'
+            >
+              <FaTelegram className='text-4xl text-[#6c63ff]' />
+            </a>
           </div>
+
         </div>
 
         <div className='md:w-[50%] lg:w-[60%] ' onSubmit={sendEmail}>
