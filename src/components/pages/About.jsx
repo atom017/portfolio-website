@@ -29,7 +29,7 @@ const About = React.forwardRef((props, ref) => {
             quas assumenda nulla nostrum esse nihil totam distinctio!
           </p>
 
-          <div className='relative self-center w-fit'>
+          {/* <div className='relative self-center w-fit'>
             <motion.svg animate={{ rotate: 360 }} transition={{ duration: 10, delay: 0.2, repeat: Infinity, ease: "linear" }}
               viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
               className='w-52 h-52 md:w-[150px] md:h-[150px] '>
@@ -47,15 +47,15 @@ const About = React.forwardRef((props, ref) => {
               src="https://images.unsplash.com/photo-1504270997636-07ddfbd48945?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fERpZ2l0YWx8ZW58MHx8MHx8fDA%3D" alt="" />
 
 
-            {/* <p className='absolute w-16 h-16 md:w-28 md:h-28 top-0 left-0 right-0 bottom-0 items-center justify-center m-auto flex text-slate-200 rounded-full'>Hire</p> */}
+            
+          </div> */}
+          <div className='w-full mt-10'>
+            <h2 className='font-bold text-lg md:text-xl font-bricolage'>Tech Stack</h2>
+            <SkillsCarousel />
           </div>
-
         </div>
 
-        <div className='w-full mt-10'>
-          <h2 className='font-bold text-lg md:text-xl font-bricolage'>Tech Stack</h2>
-          <SkillsCarousel />
-        </div>
+
 
 
 
