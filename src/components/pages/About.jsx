@@ -22,11 +22,10 @@ const About = React.forwardRef((props, ref) => {
         About Me<FaUser className='inline-flex text-[#6c63ff]' />
       </h2>
       <div className='relative flex flex-col justify-center  w-full h-full  space-x-4 '>
-        <div className='relative p-5 bg-[#CAF4FF] mb-5  flex flex-col justify-center  '>
+        <div className='relative p-5 bg-[#f9f5ff] mb-5  flex flex-col justify-center rounded-md'>
           {/* <h5 className=' text-xl mb-2 text-center'>Welcome!</h5> */}
-          <p className='mb-5 py-2 text-md md:text-lg  text-slate-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ipsa enim recusandae excepturi
-            quas assumenda nulla nostrum esse nihil totam distinctio!
+          <p className='mb-5 py-2 text-md md:text-lg  text-slate-600 font-sans'>
+            Hello! I’m Khaing Hsu Thwe, a dedicated and skilled Software Engineer with a passion for Software Development and Machine Learning. With a strong background in Computer Science, I bring a wealth of experience in Machine Learning and full-stack web applications
           </p>
 
           {/* <div className='relative self-center w-fit'>
