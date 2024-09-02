@@ -40,10 +40,10 @@ const Contact = React.forwardRef((props, ref) => {
 
   return (
     <section ref={ref} id="contact" className='mx-auto px-10 py-8 mb-10 ' >
-      <h2 className=' font-bricolage text-4xl md:text-5xl font-bold mb-3 px-10'>Keep In Touch</h2>
+      <h2 className=' font-bricolage text-4xl md:text-5xl font-bold mb-3 '>Keep In Touch</h2>
       <div className="flex flex-col-reverse md:flex md:flex-row  mx-auto md:justify-between  md:space-x-10  ">
 
-        <div className=' md:border-r px-5 py-6 max-w-[1/2] '>
+        <div className=' md:border-r  py-6 max-w-[1/2] '>
           <p className=' mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit sint distinctio temporibus?</p>
           <p className=' mb-3'><FaEnvelope className='inline-block mr-2 text-[#5A2FFB]' />khaing.hsu.thwe.dev@gmail.com</p>
           {/* <p className=' mb-3'><FaPhone className='inline-block mr-2 text-[#FF90BC]'/>+959769868633</p>
