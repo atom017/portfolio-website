@@ -13,17 +13,19 @@ import MongoDB from '../../public/assets/skills/MongoDB.svg';
 import ReactJs from '../../public/assets/skills/React-Light.svg';
 
 const skills = [
-    { img: Django, name: 'Django' },
+
     { img: Python, name: 'Python' },
     { img: JavaScript, name: 'JavaScript' },
+    { img: ReactJs, name: 'React' },
     { img: Nodejs, name: 'Node.js' },
     { img: TailwindCSS, name: 'TailwindCSS' },
     { img: Flask, name: 'Flask' },
+    { img: Django, name: 'Django' },
     { img: Tensorflow, name: 'TensorFlow' },
     { img: PostgreSQL, name: 'PostgreSQL' },
     { img: MySQL, name: 'MySQL' },
     { img: MongoDB, name: 'MongoDB' },
-    { img: ReactJs, name: 'React' },
+
 ];
 
 const SkillsCarousel = () => {
@@ -34,17 +36,16 @@ const SkillsCarousel = () => {
         const startLoop = async () => {
             if (!carouselRef.current) return;
 
-            const carouselWidth = carouselRef.current.scrollWidth / 2;
-            const viewportWidth = carouselRef.current.offsetWidth;
-
-            // Ensure the carousel scrolls exactly one full loop
-            const scrollAmount = carouselWidth / 2;
+            const carouselElement = carouselRef.current;
+            const totalWidth = carouselElement.scrollWidth;
+            const viewportWidth = carouselElement.offsetWidth;
+            const scrollAmount = totalWidth / 2;
 
             while (true) {
                 await animationControls.start({
                     x: -scrollAmount,
                     transition: {
-                        duration: 20, // Adjust the speed of the scroll
+                        duration: 25, // Adjust the speed of the scroll
                         ease: 'linear',
                     },
                 });
@@ -60,7 +61,7 @@ const SkillsCarousel = () => {
             <motion.div
                 className="flex"
                 animate={animationControls}
-                style={{ display: 'flex', width: 'max-content' }}
+                style={{ display: 'flex', flexDirection: 'row', width: 'max-content' }}
                 ref={carouselRef}
             >
                 {skills.concat(skills).map((skill, index) => (
