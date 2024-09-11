@@ -11,7 +11,7 @@ const projects_data = [
     },
     {
         "id": 2,
-        "image": "https://plus.unsplash.com/premium_photo-1705583864718-71cdbb830c79?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "../../../public/assets/projects/chat-app.png",
         "name": "Simple Chat App",
         "source": "https://github.com/atom017/simple-chat-app-client",
         "demo": "https://nf-simple-chat-app.netlify.app/",
@@ -20,7 +20,7 @@ const projects_data = [
     },
     {
         "id": 3,
-        "image": "https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "image": "../../../public/assets/projects/heart-diseaseUI.png",
         "name": "Heart Disease Prediction",
         "source": "",
         "demo": "",
@@ -38,7 +38,7 @@ const projects_data = [
     },
     {
         "id": 5,
-        "image": "https://images.pexels.com/photos/1006293/pexels-photo-1006293.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "image": "../../../public/assets/projects/blog.png",
         "name": "Blog Website",
         "source": "https://github.com/atom017/Blog-Website",
         "demo": "https://blog-website-react.netlify.app/",
@@ -47,7 +47,7 @@ const projects_data = [
     },
     {
         "id": 6,
-        "image": "https://images.pexels.com/photos/434337/pexels-photo-434337.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "image": "../../../public/assets/projects/aplaca-image.png",
         "name": "Alpaca Image Generator",
         "source": "https://github.com/atom017/Alpaca-Image-Generator",
         "demo": "https://alpaca-codementorchallenge.netlify.app/",
