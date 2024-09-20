@@ -2,7 +2,7 @@
 const projects_data = [
     {
         "id": 1,
-        "image": "../../../public/assets/projects/UI Image.png",
+        "image": "/assets/projects/UI Image.png",
         "name": "Burmese Alphabet Recognition System",
         "source": "https://github.com/atom017/Burmese-Alphabet-Recognition-System",
         "demo": "",
@@ -11,7 +11,7 @@ const projects_data = [
     },
     {
         "id": 2,
-        "image": "../../../public/assets/projects/chat-app.png",
+        "image": "/assets/projects/chat-app.png",
         "name": "Simple Chat App",
         "source": "https://github.com/atom017/simple-chat-app-client",
         "demo": "https://nf-simple-chat-app.netlify.app/",
@@ -20,7 +20,7 @@ const projects_data = [
     },
     {
         "id": 3,
-        "image": "../../../public/assets/projects/heart-diseaseUI.png",
+        "image": "/assets/projects/heart-diseaseUI.png",
         "name": "Heart Disease Prediction",
         "source": "",
         "demo": "",
