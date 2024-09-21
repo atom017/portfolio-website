@@ -2,7 +2,7 @@
 const projects_data = [
     {
         "id": 1,
-        "image": "/assets/projects/UI Image.png",
+        "image": "/assets/projects/canvas.png",
         "name": "Burmese Alphabet Recognition System",
         "source": "https://github.com/atom017/Burmese-Alphabet-Recognition-System",
         "demo": "",
@@ -47,7 +47,7 @@ const projects_data = [
     },
     {
         "id": 6,
-        "image": "../../../public/assets/projects/aplaca-image.png",
+        "image": "/assets/public/assets/projects/aplaca-image.png",
         "name": "Alpaca Image Generator",
         "source": "https://github.com/atom017/Alpaca-Image-Generator",
         "demo": "https://alpaca-codementorchallenge.netlify.app/",
