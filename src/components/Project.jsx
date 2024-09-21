@@ -40,7 +40,7 @@ const Project = ({ project }) => {
           <h3 className="text-white text-2xl font-bold mb-4">{project.name}</h3>
           <div className="flex justify-center space-x-4">
             {project.demo && (
-              <a href="#" className="px-3 py-2 rounded text-white bg-[#6c63ff] hover:bg-blue-600 transition-colors duration-400 ease-in-out">Preview</a>
+              <a href={project.demo} className="px-3 py-2 rounded text-white bg-[#6c63ff] hover:bg-blue-600 transition-colors duration-400 ease-in-out">Preview</a>
             )}
 
             <a href={project.source} className="px-3 py-2 rounded text-white bg-gray-700 hover:bg-gray-800 transition-colors duration-400 ease-in-out">Source Code</a>
