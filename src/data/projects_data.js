@@ -47,7 +47,7 @@ const projects_data = [
     },
     {
         "id": 6,
-        "image": "/assets/public/assets/projects/aplaca-image.png",
+        "image": "/assets/projects/aplaca-image.png",
         "name": "Alpaca Image Generator",
         "source": "https://github.com/atom017/Alpaca-Image-Generator",
         "demo": "https://alpaca-codementorchallenge.netlify.app/",
