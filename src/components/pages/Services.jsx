@@ -5,7 +5,7 @@ import Icon3 from '../../../public/assets/icons/service_3.svg'
 
 const Services = React.forwardRef((props, ref) => {
   return (
-    <section ref={ref} id="service" className='mx-auto px-5 mb-5 max-w-[1200px]'>
+    <section ref={ref} id="service" className='mx-auto px-4 py-8 mb-5 max-w-[1200px]'>
       <h2 className='text-center text-4xl md:text-5xl mb-10 font-bold text-[#6c63ff]'>Services</h2>
       <div className='flex flex-col space-y-5 items-center md:flex-row md:space-x-5 md:justify-between py-5 my-12'>
         <div className='flex flex-col justify-between h-full w-full md:w-[300px] p-6 bg-[#f9f5ff] rounded-lg border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer'>

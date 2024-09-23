@@ -17,7 +17,7 @@ import SkillsCarousel from '../SkillsCarousel'
 
 const About = React.forwardRef((props, ref) => {
   return (
-    <section ref={ref} id="about" className='relative flex  flex-col  items-center   mx-auto  px-4 py-8 max-w-[1200px]'>
+    <section ref={ref} id="about" className='relative flex  flex-col  items-center  mx-auto  px-4 py-8 max-w-[1200px]'>
       <h2 className='font-bricolage text-center  text-4xl md:text-5xl mb-10 text-[#6c63ff] font-bold'>
         About Me<FaUser className='inline-flex text-[#6c63ff]' />
       </h2>
