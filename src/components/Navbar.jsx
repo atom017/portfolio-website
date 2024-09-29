@@ -131,7 +131,7 @@ const Navbar = ({ scrollTo }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className='flex z-2 w-full  bg-gray-700 justify-between ssm:block sm:hidden'>
+          className='flex z-2 w-full  bg-gray-700 justify-between ssm:block md:hidden'>
           <div className=' flex h-screen justify-between w-full'>
             <ul className='w-full'>
               {nav_items.map((item, index) => {
