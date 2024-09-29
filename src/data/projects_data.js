@@ -5,7 +5,7 @@ const projects_data = [
         "image": "/assets/projects/canvas.png",
         "name": "Burmese Alphabet Recognition System",
         "source": "https://github.com/atom017/Burmese-Alphabet-Recognition-System",
-        "demo": "",
+        "demo": "https://atom017-burmese-alphabet-recognition-system-main-page-65ovyw.streamlit.app/",
         "type": "AI",
         "tech_stack": ['Python', 'Tensorflow']
     },
@@ -38,7 +38,7 @@ const projects_data = [
     },
     {
         "id": 5,
-        "image": "../../../public/assets/projects/blog.png",
+        "image": "/assets/projects/blog.png",
         "name": "Blog Website",
         "source": "https://github.com/atom017/Blog-Website",
         "demo": "https://blog-website-react.netlify.app/",
