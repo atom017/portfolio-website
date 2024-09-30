@@ -7,7 +7,8 @@ const projects_data = [
         "source": "https://github.com/atom017/Burmese-Alphabet-Recognition-System",
         "demo": "https://atom017-burmese-alphabet-recognition-system-main-page-65ovyw.streamlit.app/",
         "type": "AI",
-        "tech_stack": ['Python', 'Tensorflow']
+        "description":"The System recognizes handwritten Burmese alphabets and give text as output",
+        "tags": ['Tensorflow','CNN','Scikit-learn','Streamlit']
     },
     {
         "id": 2,
@@ -16,7 +17,8 @@ const projects_data = [
         "source": "https://github.com/atom017/simple-chat-app-client",
         "demo": "https://nf-simple-chat-app.netlify.app/",
         "type": "Web",
-        "tech_stack": ['React', 'Node']
+        "description":"Simple chat appliction to chat through rooms",
+        "tags": ['React.js', 'Node.js','Socketio']
     },
     {
         "id": 3,
@@ -25,7 +27,7 @@ const projects_data = [
         "source": "",
         "demo": "",
         "type": "AI",
-        "tech_stack": ['React', 'Node']
+        "tags": ["CNN", "Scikit-learn","Streamlit"]
     },
     {
         "id": 4,
@@ -34,7 +36,7 @@ const projects_data = [
         "source": "",
         "demo": "https://freshbites.onrender.com",
         "type": "Web",
-        "tech_stack": ['React', 'Node']
+        "tags": ['React.js', 'Node.js','MongoDB']
     },
     {
         "id": 5,
@@ -43,7 +45,8 @@ const projects_data = [
         "source": "https://github.com/atom017/Blog-Website",
         "demo": "https://blog-website-react.netlify.app/",
         "type": "Web",
-        "tech_stack": ['React', 'Node']
+        "description":"A simple blog website",
+        "tags": ['React.js', 'Firebase']
     },
     {
         "id": 6,
@@ -52,7 +55,7 @@ const projects_data = [
         "source": "https://github.com/atom017/Alpaca-Image-Generator",
         "demo": "https://alpaca-codementorchallenge.netlify.app/",
         "type": "Web",
-        "tech_stack": ['React', 'Node']
+        "tags": ['Reac.js']
     },
 ]
 
