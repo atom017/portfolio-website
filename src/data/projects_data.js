@@ -7,8 +7,8 @@ const projects_data = [
         "source": "https://github.com/atom017/Burmese-Alphabet-Recognition-System",
         "demo": "https://atom017-burmese-alphabet-recognition-system-main-page-65ovyw.streamlit.app/",
         "type": "AI",
-        "description":"The System recognizes handwritten Burmese alphabets and give text as output",
-        "tags": ['Tensorflow','CNN','Scikit-learn','Streamlit']
+        "description": "The System recognizes handwritten Burmese alphabets and give text as output",
+        "tags": ['Tensorflow', 'CNN', 'Scikit-learn', 'Streamlit']
     },
     {
         "id": 2,
@@ -17,8 +17,8 @@ const projects_data = [
         "source": "https://github.com/atom017/simple-chat-app-client",
         "demo": "https://nf-simple-chat-app.netlify.app/",
         "type": "Web",
-        "description":"Simple chat appliction to chat through rooms",
-        "tags": ['React.js', 'Node.js','Socketio']
+        "description": "Simple chat appliction to chat through rooms",
+        "tags": ['React.js', 'Node.js', 'Socketio']
     },
     {
         "id": 3,
@@ -27,7 +27,7 @@ const projects_data = [
         "source": "",
         "demo": "",
         "type": "AI",
-        "tags": ["CNN", "Scikit-learn","Streamlit"]
+        "tags": ["CNN", "Scikit-learn", "Streamlit"]
     },
     {
         "id": 4,
@@ -36,7 +36,7 @@ const projects_data = [
         "source": "",
         "demo": "https://freshbites.onrender.com",
         "type": "Web",
-        "tags": ['React.js', 'Node.js','MongoDB']
+        "tags": ['React.js', 'Node.js', 'MongoDB']
     },
     {
         "id": 5,
@@ -45,12 +45,12 @@ const projects_data = [
         "source": "https://github.com/atom017/Blog-Website",
         "demo": "https://blog-website-react.netlify.app/",
         "type": "Web",
-        "description":"A simple blog website",
+        "description": "A simple blog website",
         "tags": ['React.js', 'Firebase']
     },
     {
         "id": 6,
-        "image": "/assets/projects/aplaca-image.png",
+        "image": "/assets/projects/alpaca.png",
         "name": "Alpaca Image Generator",
         "source": "https://github.com/atom017/Alpaca-Image-Generator",
         "demo": "https://alpaca-codementorchallenge.netlify.app/",
