@@ -1,17 +1,16 @@
-import PropTypes from 'prop-types'; 
-import { FaCode, FaEye } from 'react-icons/fa';
+import PropTypes from 'prop-types';
+import { FaArrowRight, FaGithub } from 'react-icons/fa';
 
 const Project = ({ project }) => {
   return (
-    <div className="flex flex-col h-[450px] rounded-lg overflow-hidden shadow-lg group transition-transform transform hover:scale-105">
+    <div className="flex flex-col h-[350px] rounded-lg overflow-hidden shadow-lg group transition-transform transform ">
       <img
         className="w-full h-48 object-cover"
         src={project.image}
         alt="Project Image"
       />
-      <div className="flex flex-col p-4 bg-white flex-grow">
-        <h3 className="text-lg font-semibold mb-2">{project.name}</h3>
-        <p className="text-gray-600 mb-4 flex-grow">{project.description}</p>
+      <div className="flex flex-col p-4 bg-[#f9f5ff] flex-grow">
+        <h3 className="text-lg font-bricolage font-semibold mb-2">{project.name}</h3>
         <div className="flex flex-wrap mb-4">
           {project.tags.map((tag, index) => (
             <span
@@ -26,21 +25,21 @@ const Project = ({ project }) => {
           {project.demo && (
             <a
               href={project.demo}
-              className="flex items-center px-4 py-2 rounded bg-[#6c63ff] text-white hover:bg-[#6c63ff] transition-colors duration-300"
+              className="flex items-center text-[#6c63ff] hover:underline transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaEye className="mr-2" /> Demo
+              <FaArrowRight className="mr-2 rotate-[-45deg]" />
             </a>
           )}
           {project.source && (
             <a
               href={project.source}
-              className="flex items-center px-4 py-2 rounded bg-gray-600 text-white hover:bg-gray-700 transition-colors duration-300"
+              className="flex items-center text-gray-600 hover:underline transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaCode className="mr-2" /> Source Code
+              <FaGithub className="mr-2" />
             </a>
           )}
         </div>
@@ -53,7 +52,6 @@ Project.propTypes = {
   project: PropTypes.shape({
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
     demo: PropTypes.string,
     source: PropTypes.string.isRequired,
     tags: PropTypes.arrayOf(PropTypes.string).isRequired,
