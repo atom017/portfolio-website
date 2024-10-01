@@ -1,31 +1,19 @@
 import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import Django from '../../public/assets/skills/Django.svg';
-import Python from '../../public/assets/skills/Python-Light.svg';
-import JavaScript from '../../public/assets/skills/JavaScript.svg';
-import Nodejs from '../../public/assets/skills/NodeJS-Light.svg';
-import TailwindCSS from '../../public/assets/skills/TailwindCSS-Light.svg';
-import Flask from '../../public/assets/skills/Flask-Light.svg';
-import Tensorflow from '../../public/assets/skills/TensorFlow-Light.svg';
-import PostgreSQL from '../../public/assets/skills/PostgreSQL-Light.svg';
-import MySQL from '../../public/assets/skills/MySQL-Light.svg';
-import MongoDB from '../../public/assets/skills/MongoDB.svg';
-import ReactJs from '../../public/assets/skills/React-Light.svg';
+import { FaPython, FaJs, FaReact, FaNodeJs } from 'react-icons/fa'; 
+import { SiFlask, SiDjango, SiTensorflow, SiPostgresql, SiMysql, SiMongodb } from 'react-icons/si'; 
 
 const skills = [
-
-    { img: Python, name: 'Python' },
-    { img: JavaScript, name: 'JavaScript' },
-    { img: ReactJs, name: 'React' },
-    { img: Nodejs, name: 'Node.js' },
-    { img: TailwindCSS, name: 'TailwindCSS' },
-    { img: Flask, name: 'Flask' },
-    { img: Django, name: 'Django' },
-    { img: Tensorflow, name: 'TensorFlow' },
-    { img: PostgreSQL, name: 'PostgreSQL' },
-    { img: MySQL, name: 'MySQL' },
-    { img: MongoDB, name: 'MongoDB' },
-
+    { icon: <FaPython />, name: 'Python' },
+    { icon: <FaJs />, name: 'JavaScript' },
+    { icon: <FaReact />, name: 'React' },
+    { icon: <FaNodeJs />, name: 'Node.js' },
+    { icon: <SiFlask />, name: 'Flask' },
+    { icon: <SiDjango />, name: 'Django' },
+    { icon: <SiTensorflow />, name: 'TensorFlow' },
+    { icon: <SiPostgresql />, name: 'PostgreSQL' },
+    { icon: <SiMysql />, name: 'MySQL' },
+    { icon: <SiMongodb />, name: 'MongoDB' },
 ];
 
 const SkillsCarousel = () => {
@@ -45,7 +33,7 @@ const SkillsCarousel = () => {
                 await animationControls.start({
                     x: -scrollAmount,
                     transition: {
-                        duration: 25, // Adjust the speed of the scroll
+                        duration: 25,
                         ease: 'linear',
                     },
                 });
@@ -69,11 +57,9 @@ const SkillsCarousel = () => {
                         key={index}
                         className="min-w-[80px] sm:min-w-[100px] p-2 sm:p-5 flex-shrink-0 flex flex-col items-center"
                     >
-                        <img
-                            src={skill.img}
-                            alt={skill.name}
-                            className="w-10 h-10 sm:w-16 sm:h-16 object-contain"
-                        />
+                        <div className="text-center text-3xl sm:text-4xl md:text-5xl"> {/* Adjust size here */}
+                            {skill.icon}
+                        </div>
                         <p className="mt-2 text-xs sm:text-sm md:text-base text-center">
                             {skill.name}
                         </p>
