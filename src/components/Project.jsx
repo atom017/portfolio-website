@@ -25,7 +25,7 @@ const Project = ({ project }) => {
           {project.demo && (
             <a
               href={project.demo}
-              className="flex items-center text-[#6c63ff] hover:underline transition-colors duration-300"
+              className="flex items-center px-1 py-2 text-[#6c63ff] hover:underline transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -35,7 +35,7 @@ const Project = ({ project }) => {
           {project.source && (
             <a
               href={project.source}
-              className="flex items-center text-gray-600 hover:underline transition-colors duration-300"
+              className="flex items-center px-1 py-2 text-gray-600 hover:underline transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
