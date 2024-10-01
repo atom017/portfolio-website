@@ -9,7 +9,7 @@ const Project = ({ project }) => {
         src={project.image}
         alt="Project Image"
       />
-      <div className="flex flex-col p-4 bg-[#f9f5ff] flex-grow">
+      <div className="flex flex-col p-4 bg-white flex-grow">
         <h3 className="text-lg font-bricolage font-semibold mb-2">{project.name}</h3>
         <div className="flex flex-wrap mb-4">
           {project.tags.map((tag, index) => (
