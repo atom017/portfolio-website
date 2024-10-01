@@ -39,7 +39,7 @@ const Contact = React.forwardRef((props, ref) => {
   };
 
   return (
-    <section ref={ref} id="contact" className='mx-auto px-4 py-8 mb-10 max-w-[1200px]' >
+    <section ref={ref} id="contact" className='mx-auto px-5 py-8 mb-10 max-w-[1200px]' >
       <h2 className=' font-bricolage text-4xl md:text-5xl font-bold mb-3 text-[#6c63ff] '>Keep In Touch</h2>
       <div className="flex flex-col-reverse md:flex md:flex-row  mx-auto md:justify-between  md:space-x-10  ">
 

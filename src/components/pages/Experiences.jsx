@@ -7,7 +7,7 @@ import ExperienceTest from '../ExperienceTest'
 const Experiences = React.forwardRef((props, ref) => {
   let exp = experiences_data[1]
   return (
-    <section ref={ref} id='experience' className='mx-auto px-4 py-8 mb-10 max-w-[1200px]'>
+    <section ref={ref} id='experience' className='mx-auto px-5 py-8 mb-10 max-w-[1200px]'>
       <h2 className='font-bricolage font-bold text-4xl md:text-5xl text-[#6c63ff] mb-7 text-center'>
         Work <FaBriefcase className='inline-flex' />
       </h2>

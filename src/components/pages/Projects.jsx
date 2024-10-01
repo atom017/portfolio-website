@@ -21,7 +21,7 @@ const Projects = React.forwardRef((props, ref) => {
   };
 
   return (
-    <section ref={ref} id="projects" className="mx-auto px-4 py-8 mb-5 max-w-[1200px]">
+    <section ref={ref} id="projects" className="mx-auto px-5 py-8 mb-5 max-w-[1200px]">
       <h2 className="font-bricolage text-center text-4xl md:text-5xl font-bold mb-5 text-[#6c63ff]">Projects</h2>
       <div className="py-6 flex flex-row justify-center gap-2 mb-3">
         {['All', 'Web', 'AI'].map((type) => (
@@ -35,7 +35,7 @@ const Projects = React.forwardRef((props, ref) => {
           </button>
         ))}
       </div>
-      <div className="mx-auto grid grid-flow-row auto-rows-auto grid-cols-1 place-items-center lg:grid-cols-3 gap-4">
+      <div className="mx-auto grid grid-flow-row auto-rows-auto grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project, index) => {
           const sectionRef = React.useRef(null);
           const inView = useInView(sectionRef, { once: false });
