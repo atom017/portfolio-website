@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaGithub, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -18,16 +18,6 @@ const Navbar = () => {
           <Link href="#projects">Projects</Link>
           <Link href="#experience">Experience</Link>
           <Link href="#contact">Contact</Link>
-        </div>
-
-        {/* Social Icons */}
-        <div className="space-x-4">
-          <a href="https://github.com/your-username" target="_blank" className="text-white hover:text-gray-400">
-            <FaGithub size={24} />
-          </a>
-          <a href="https://linkedin.com/in/your-profile" target="_blank" className="text-white hover:text-gray-400">
-            <FaLinkedin size={24} />
-          </a>
         </div>
 
         {/* Mobile Menu Icon */}
@@ -51,16 +41,6 @@ const Navbar = () => {
             <Link href="#projects" className="text-white hover:text-gray-400">Projects</Link>
             <Link href="#experience" className="text-white hover:text-gray-400">Experience</Link>
             <Link href="#contact" className="text-white hover:text-gray-400">Contact</Link>
-          </div>
-
-          {/* Mobile Social Icons */}
-          <div className="flex justify-center space-x-6 mt-6">
-            <a href="https://github.com/your-username" target="_blank" className="text-white hover:text-gray-400">
-              <FaGithub size={24} />
-            </a>
-            <a href="https://linkedin.com/in/your-profile" target="_blank" className="text-white hover:text-gray-400">
-              <FaLinkedin size={24} />
-            </a>
           </div>
         </motion.div>
       )}

@@ -40,83 +40,89 @@ const About = () => {
         >
           Skills
         </motion.h3>
-        
-        <motion.div
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-        >
-          {/* HTML */}
-          <div className="text-4xl flex flex-col items-center">
-            <FaHtml5 />
-            <p className="mt-2">HTML</p>
-          </div>
 
-          {/* CSS */}
-          <div className="text-4xl flex flex-col items-center">
-            <FaCss3Alt />
-            <p className="mt-2">CSS</p>
-          </div>
+        <motion.div className="overflow-hidden relative">
+          {/* The wrapper for the scroll */}
+          <div
+            className="flex space-x-8 animate-marquee"
+            style={{ animationDuration: '30s', whiteSpace: 'nowrap' }}
+          >
+            {/* Skill Items (repeated for infinite scrolling) */}
+            {[...Array(2)].map((_, idx) => (
+              <div className="flex items-center space-x-8" key={idx}>
+                {/* HTML */}
+                <div className="text-3xl flex flex-col items-center">
+                  <FaHtml5 />
+                  <p className="mt-2 text-sm">HTML</p>
+                </div>
 
-          {/* JavaScript */}
-          <div className="text-4xl flex flex-col items-center">
-            <FaJs />
-            <p className="mt-2">JavaScript</p>
-          </div>
+                {/* CSS */}
+                <div className="text-3xl flex flex-col items-center">
+                  <FaCss3Alt />
+                  <p className="mt-2 text-sm">CSS</p>
+                </div>
 
-          {/* React */}
-          <div className="text-4xl flex flex-col items-center">
-            <FaReact />
-            <p className="mt-2">React</p>
-          </div>
+                {/* JavaScript */}
+                <div className="text-3xl flex flex-col items-center">
+                  <FaJs />
+                  <p className="mt-2 text-sm">JavaScript</p>
+                </div>
 
-          {/* Python */}
-          <div className="text-4xl flex flex-col items-center">
-            <FaPython />
-            <p className="mt-2">Python</p>
-          </div>
+                {/* React */}
+                <div className="text-3xl flex flex-col items-center">
+                  <FaReact />
+                  <p className="mt-2 text-sm">React</p>
+                </div>
 
-          {/* Node.js */}
-          <div className="text-4xl flex flex-col items-center">
-            <FaNodeJs />
-            <p className="mt-2">Node.js</p>
-          </div>
+                {/* Python */}
+                <div className="text-3xl flex flex-col items-center">
+                  <FaPython />
+                  <p className="mt-2 text-sm">Python</p>
+                </div>
 
-          {/* Git */}
-          <div className="text-4xl flex flex-col items-center">
-            <FaGitAlt />
-            <p className="mt-2">Git</p>
-          </div>
+                {/* Node.js */}
+                <div className="text-3xl flex flex-col items-center">
+                  <FaNodeJs />
+                  <p className="mt-2 text-sm">Node.js</p>
+                </div>
 
-          {/* Docker */}
-          <div className="text-4xl flex flex-col items-center">
-            <FaDocker />
-            <p className="mt-2">Docker</p>
-          </div>
+                {/* Git */}
+                <div className="text-3xl flex flex-col items-center">
+                  <FaGitAlt />
+                  <p className="mt-2 text-sm">Git</p>
+                </div>
 
-          {/* Flask */}
-          <div className="text-4xl flex flex-col items-center">
-            <FaFlask />
-            <p className="mt-2">Flask</p>
-          </div>
+                {/* Docker */}
+                <div className="text-3xl flex flex-col items-center">
+                  <FaDocker />
+                  <p className="mt-2 text-sm">Docker</p>
+                </div>
 
-          {/* Django */}
-          <div className="text-4xl flex flex-col items-center">
-            <SiDjango />
-            <p className="mt-2">Django</p>
-          </div>
+                {/* Flask */}
+                <div className="text-3xl flex flex-col items-center">
+                  <FaFlask />
+                  <p className="mt-2 text-sm">Flask</p>
+                </div>
 
-          {/* TensorFlow */}
-          <div className="text-4xl flex flex-col items-center">
-            <SiTensorflow />
-            <p className="mt-2">TensorFlow</p>
-          </div>
+                {/* Django */}
+                <div className="text-3xl flex flex-col items-center">
+                  <SiDjango />
+                  <p className="mt-2 text-sm">Django</p>
+                </div>
 
-          {/* Postman */}
-          <div className="text-4xl flex flex-col items-center">
-            <SiPostman />
-            <p className="mt-2">Postman</p>
+                {/* TensorFlow */}
+                <div className="text-3xl flex flex-col items-center">
+                  <SiTensorflow />
+                  <p className="mt-2 text-sm">TensorFlow</p>
+                </div>
+
+                {/* Postman */}
+                <div className="text-3xl flex flex-col items-center">
+                  <SiPostman />
+                  <p className="mt-2 text-sm">Postman</p>
+                </div>
+              </div>
+            ))}
           </div>
         </motion.div>
       </motion.div>

@@ -10,7 +10,7 @@ const Experience = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <h2 className="text-3xl font-semibold text-center text-blue-500">
+        <h2 className="text-3xl font-semibold text-center text-white">
           <FaBriefcase className="inline-block mr-2" /> Experience
         </h2>
 

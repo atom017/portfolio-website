@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const HomePage= () => {
+const HomePage = () => {
   return (
     <section id="home" className="flex items-center justify-center bg-gray-900 text-white h-screens pt-24">
       <div className="container mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center">
@@ -22,7 +22,7 @@ const HomePage= () => {
         <div className="w-full md:w-1/2 flex justify-center">
           <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg">
             <img
-              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=600"  
+              src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt="Profile Image"
               layout="fill"
               objectFit="cover"
