@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaNodeJs, FaGitAlt, FaDocker, FaFlask } from 'react-icons/fa';
 import { SiDjango, SiTensorflow, SiPostman } from 'react-icons/si';
+import { FaCogs, FaRobot, FaCloud, FaLaptopCode } from 'react-icons/fa';  // Add new icons
 
 const About = () => {
   return (
@@ -123,6 +124,45 @@ const About = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </motion.div>
+
+        {/* What I Do Section */}
+        <motion.h3
+          className="text-2xl font-semibold text-center mt-16 mb-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
+        >
+          What I Do
+        </motion.h3>
+        <motion.div className="flex flex-wrap justify-center gap-8">
+          {/* API Development */}
+          <div className="text-3xl flex flex-col items-center bg-blue-600 p-6 rounded-lg shadow-lg w-80">
+            <FaCogs />
+            <p className="mt-2 text-sm">API Development</p>
+            <p className="text-xs text-center mt-2">I specialize in building robust APIs that power your applications, ensuring smooth and efficient communication between the front-end and back-end.</p>
+          </div>
+
+          {/* Chatbot Development */}
+          <div className="text-3xl flex flex-col items-center bg-blue-600 p-6 rounded-lg shadow-lg w-80">
+            <FaRobot />
+            <p className="mt-2 text-sm">Chatbot Development</p>
+            <p className="text-xs text-center mt-2">Creating intelligent chatbots that automate customer support and enhance user engagement through advanced AI and natural language processing techniques.</p>
+          </div>
+
+          {/* Deployment */}
+          <div className="text-3xl flex flex-col items-center bg-blue-600 p-6 rounded-lg shadow-lg w-80">
+            <FaCloud />
+            <p className="mt-2 text-sm">Deployment</p>
+            <p className="text-xs text-center mt-2">I handle deployment of applications on various platforms, ensuring smooth operations and scalability for your projects in cloud environments.</p>
+          </div>
+
+          {/* Fullstack Development */}
+          <div className="text-3xl flex flex-col items-center bg-blue-600 p-6 rounded-lg shadow-lg w-80">
+            <FaLaptopCode />
+            <p className="mt-2 text-sm">Fullstack Development</p>
+            <p className="text-xs text-center mt-2">From the front-end to the back-end, I create full-stack web applications that are fast, scalable, and user-friendly, using modern frameworks and technologies.</p>
           </div>
         </motion.div>
       </motion.div>
