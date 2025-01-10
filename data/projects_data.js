@@ -11,7 +11,7 @@ const projects_data = [
     },
     {
         "id": 1,
-        "image": "/assets/projects/canvas.png",
+        "image": "projects/burmese_alphabet.png",
         "name": "Burmese Alphabet Recognition System",
         "source": "https://github.com/atom017/Burmese-Alphabet-Recognition-System",
         "demo": "https://atom017-burmese-alphabet-recognition-system-main-page-65ovyw.streamlit.app/",
@@ -21,7 +21,7 @@ const projects_data = [
     },
     {
         "id": 2,
-        "image": "https://images.pexels.com/photos/434337/pexels-photo-434337.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "image": "projects/chat-app.png",
         "name": "Simple Chat App",
         "source": "https://github.com/atom017/simple-chat-app-client",
         "demo": "https://nf-simple-chat-app.netlify.app/",
@@ -41,7 +41,7 @@ const projects_data = [
 
     {
         "id": 5,
-        "image": "/assets/projects/blog.png",
+        "image": "projects/blog.png",
         "name": "Blog Website",
         "source": "https://github.com/atom017/Blog-Website",
         "demo": "https://blog-website-react.netlify.app/",
@@ -51,7 +51,7 @@ const projects_data = [
     },
     {
         "id": 6,
-        "image": "/assets/projects/alpaca.png",
+        "image": "/projects/alpaca.png",
         "name": "Alpaca Image Generator",
         "source": "https://github.com/atom017/Alpaca-Image-Generator",
         "demo": "https://alpaca-codementorchallenge.netlify.app/",
