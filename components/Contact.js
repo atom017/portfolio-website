@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaUser, FaEnvelope, FaComment } from 'react-icons/fa';
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
 
@@ -36,46 +36,51 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="p-20 bg-gray-900 text-white">
+    <section id="contact" className="px-8 py-10 md:px-12 lg:px-20 bg-gray-900 text-white">
       <h2 className="text-3xl text-center font-semibold mb-6">Contact</h2>
-      <form onSubmit={handleSubmit} className="max-w-lg mx-auto bg-gray-800 p-6 rounded-lg">
-        {/* Name */}
-        <div className="mb-4">
+      <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
+        <div className="mb-4 relative">
           <label htmlFor="name" className="block text-sm font-medium text-gray-300">Name</label>
+          <div className="absolute left-3 top-8 text-gray-400">
+            <FaUser size={18} />
+          </div>
           <input
             type="text"
             id="name"
             name="name"
             required
-            className="w-full p-2 mt-2 bg-gray-700 text-white rounded-md"
+            className="w-full p-2 pl-10 mt-2 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
-        {/* Email */}
-        <div className="mb-4">
+        <div className="mb-4 relative">
           <label htmlFor="email" className="block text-sm font-medium text-gray-300">Email</label>
+          <div className="absolute left-3 top-8 text-gray-400">
+            <FaEnvelope size={18} />
+          </div>
           <input
             type="email"
             id="email"
             name="email"
             required
-            className="w-full p-2 mt-2 bg-gray-700 text-white rounded-md"
+            className="w-full p-2 pl-10 mt-2 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
-        {/* Message */}
-        <div className="mb-4">
+        <div className="mb-4 relative">
           <label htmlFor="message" className="block text-sm font-medium text-gray-300">Message</label>
+          <div className="absolute left-3 top-8 text-gray-400">
+            <FaComment size={18} />
+          </div>
           <textarea
             id="message"
             name="message"
             required
             rows="5"
-            className="w-full p-2 mt-2 bg-gray-700 text-white rounded-md"
+            className="w-full p-2 pl-10 mt-2 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
-        {/* Submit Button */}
         <button
           type="submit"
           className={`w-full p-3 mt-4 bg-blue-500 text-white rounded-lg ${isSubmitting ? 'cursor-not-allowed' : ''}`}
@@ -85,7 +90,6 @@ const Contact = () => {
         </button>
       </form>
 
-      {/* State Message */}
       {stateMessage && (
         <div className="mt-6 text-center text-sm text-green-400">{stateMessage}</div>
       )}
@@ -100,6 +104,17 @@ const Contact = () => {
         </a>
         <a href="https://twitter.com/your-username" target="_blank" rel="noopener noreferrer">
           <FaTwitter size={24} className="text-white hover:text-gray-400 transition duration-300" />
+        </a>
+      </div>
+
+      {/* Email Information */}
+      <div className="mt-8 text-center text-sm text-gray-400">
+        <p>Or you can reach me directly at:</p>
+        <a
+          href="mailto:your-email@example.com"
+          className="text-blue-400 hover:text-blue-500"
+        >
+          khaing.hsu.thwe.dev@example.com
         </a>
       </div>
     </section>

@@ -2,7 +2,7 @@
 const projects_data = [
     {
         "id": 1,
-        "image": "https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "image": "projects/e-commerce-products1.png",
         "name": "E-Commerce Project",
         "source": "https://github.com/atom017/e-commerce-frontend",
         "demo": "https://my-e-shop-frontend.onrender.com",

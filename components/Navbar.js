@@ -1,10 +1,34 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home'); // Track the active section
+
+  // Use IntersectionObserver to track section visibility
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id); // Update the active section when it enters the viewport
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the section is visible
+    );
+
+    // Observe each section
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => observer.observe(section));
+
+    return () => {
+      // Cleanup observer when component unmounts
+      sections.forEach(section => observer.unobserve(section));
+    };
+  }, []);
 
   return (
     <nav className="bg-gray-900 text-white fixed w-full z-50">
@@ -13,11 +37,41 @@ const Navbar = () => {
 
         {/* Desktop Navbar Links */}
         <div className="hidden md:flex space-x-6">
-          <Link href="#home">Home</Link>
-          <Link href="#about">About</Link>
-          <Link href="#projects">Projects</Link>
-          <Link href="#experience">Experience</Link>
-          <Link href="#contact">Contact</Link>
+          <Link
+            href="#home"
+            className={`${activeSection === 'home' ? 'text-blue-500' : 'text-white'
+              } hover:text-gray-400`}
+          >
+            Home
+          </Link>
+          <Link
+            href="#about"
+            className={`${activeSection === 'about' ? 'text-blue-500' : 'text-white'
+              } hover:text-gray-400`}
+          >
+            About
+          </Link>
+          <Link
+            href="#projects"
+            className={`${activeSection === 'projects' ? 'text-blue-500' : 'text-white'
+              } hover:text-gray-400`}
+          >
+            Projects
+          </Link>
+          <Link
+            href="#experience"
+            className={`${activeSection === 'experience' ? 'text-blue-500' : 'text-white'
+              } hover:text-gray-400`}
+          >
+            Experience
+          </Link>
+          <Link
+            href="#contact"
+            className={`${activeSection === 'contact' ? 'text-blue-500' : 'text-white'
+              } hover:text-gray-400`}
+          >
+            Contact
+          </Link>
         </div>
 
         {/* Mobile Menu Icon */}
@@ -36,11 +90,41 @@ const Navbar = () => {
         >
           {/* Mobile Links */}
           <div className="flex flex-col items-center space-y-4">
-            <Link href="#home" className="text-white hover:text-gray-400">Home</Link>
-            <Link href="#about" className="text-white hover:text-gray-400">About</Link>
-            <Link href="#projects" className="text-white hover:text-gray-400">Projects</Link>
-            <Link href="#experience" className="text-white hover:text-gray-400">Experience</Link>
-            <Link href="#contact" className="text-white hover:text-gray-400">Contact</Link>
+            <Link
+              href="#home"
+              className={`${activeSection === 'home' ? 'text-blue-500' : 'text-white'
+                } hover:text-gray-400`}
+            >
+              Home
+            </Link>
+            <Link
+              href="#about"
+              className={`${activeSection === 'about' ? 'text-blue-500' : 'text-white'
+                } hover:text-gray-400`}
+            >
+              About
+            </Link>
+            <Link
+              href="#projects"
+              className={`${activeSection === 'projects' ? 'text-blue-500' : 'text-white'
+                } hover:text-gray-400`}
+            >
+              Projects
+            </Link>
+            <Link
+              href="#experience"
+              className={`${activeSection === 'experience' ? 'text-blue-500' : 'text-white'
+                } hover:text-gray-400`}
+            >
+              Experience
+            </Link>
+            <Link
+              href="#contact"
+              className={`${activeSection === 'contact' ? 'text-blue-500' : 'text-white'
+                } hover:text-gray-400`}
+            >
+              Contact
+            </Link>
           </div>
         </motion.div>
       )}
