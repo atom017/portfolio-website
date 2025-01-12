@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaUser, FaEnvelope, FaComment } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaUser, FaEnvelope, FaComment, FaTelegram } from 'react-icons/fa';
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
 
@@ -49,14 +49,14 @@ const Contact = () => {
 
           {/* Social Media Links */}
           <div className="flex justify-center lg:justify-start space-x-6 mt-6">
-            <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/atom017" target="_blank" rel="noopener noreferrer">
               <FaGithub size={24} className="text-white hover:text-gray-400 transition duration-300" />
             </a>
-            <a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/khaing-hsu-thwe" target="_blank" rel="noopener noreferrer">
               <FaLinkedin size={24} className="text-white hover:text-gray-400 transition duration-300" />
             </a>
-            <a href="https://twitter.com/your-username" target="_blank" rel="noopener noreferrer">
-              <FaTwitter size={24} className="text-white hover:text-gray-400 transition duration-300" />
+            <a href="https://t.me/AntonioHaruki" target="_blank" rel="noopener noreferrer">
+              <FaTelegram size={24} className="text-white hover:text-gray-400 transition duration-300" />
             </a>
           </div>
 
