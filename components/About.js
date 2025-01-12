@@ -27,9 +27,11 @@ const About = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          I'm a passionate developer with experience in building modern web applications. I love working with
-          technologies like React, Next.js, Django, TensorFlow, and more. My goal is to create seamless user experiences
-          and beautiful interfaces while constantly learning and adapting to new technologies.
+          I'm a passionate developer with experience in building modern web applications.  My technical expertise includes
+          Python, JavaScript, and frameworks like React.js, Node.js, Django and Flask.
+          I have successfully delivered projects involving object detection,
+          object tracking, recommendation systems, and chatbots, showcasing my ability to integrate AI and machine learning into real-world applications.
+
         </motion.p>
 
         {/* Skills Section */}

@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 import projects_data from '../data/projects_data'; // Import your projects data
+import Link from 'next/link';
 
 const Projects = () => {
+
   return (
     <section id="projects" className="p-20 bg-gray-900 text-white">
       <motion.div

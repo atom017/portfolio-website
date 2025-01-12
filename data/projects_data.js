@@ -11,9 +11,9 @@ const projects_data = [
         "tags": ['React.js', 'Node.js', 'MongoDB', 'Redux']
     },
     {
-        "id": 1,
+        "id": 2,
         "image": "projects/burmese_alphabet.png",
-        "name": "Burmese Alphabet Recognition System",
+        "name": "Burmese Alphabet Recognition ",
         "source": "https://github.com/atom017/Burmese-Alphabet-Recognition-System",
         "demo": "https://atom017-burmese-alphabet-recognition-system-main-page-65ovyw.streamlit.app/",
         "type": "AI",
@@ -21,17 +21,17 @@ const projects_data = [
         "tags": ['Tensorflow', 'CNN', 'Streamlit']
     },
     {
-        "id": 2,
-        "image": "projects/chat-app.png",
-        "name": "Simple Chat App",
-        "source": "https://github.com/atom017/simple-chat-app-client",
-        "demo": "https://nf-simple-chat-app.netlify.app/",
-        "type": "Web",
+        "id": 3,
+        "image": "projects/chat-with-pdf-file.png",
+        "name": "Chat with PDF",
+        "source": "https://github.com/atom017/chat_pdf",
+        "demo": "https://chat-with-pdf-file.vercel.app/",
+        "type": "AI",
         "description": "Simple chat appliction to chat through rooms",
-        "tags": ['React.js', 'Node.js', 'Socketio']
+        "tags": ['Llama3', 'Flask', 'Groq']
     },
     {
-        "id": 3,
+        "id": 4,
         "image": "projects/heart_disease_predict.png",
         "name": "Heart Disease Prediction",
         "source": "",

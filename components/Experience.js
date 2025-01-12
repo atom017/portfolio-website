@@ -27,10 +27,10 @@ const Experience = () => {
               <FaBriefcase />
             </div>
             <div>
-              <h3 className="text-xl font-semibold">Frontend Developer at ABC Corp.</h3>
-              <p className="text-sm text-gray-400">2022 - Present</p>
+              <h3 className="text-xl font-semibold">Software Engineer at Global Walkers</h3>
+              <p className="text-sm text-gray-400">2024 Feb- Present</p>
               <p className="mt-2">
-                Responsible for building and maintaining responsive, user-friendly web applications with a focus on UI/UX design.
+                Responsible for building and maintaining object detection models,person tracking systems and AI related software applications.
               </p>
             </div>
           </motion.div>
@@ -46,10 +46,10 @@ const Experience = () => {
               <FaBriefcase />
             </div>
             <div>
-              <h3 className="text-xl font-semibold">Junior Web Developer at XYZ Ltd.</h3>
-              <p className="text-sm text-gray-400">2021 - 2022</p>
+              <h3 className="text-xl font-semibold">Junior Python Developer at Visible One,HK</h3>
+              <p className="text-sm text-gray-400">2023 Feb - 2023 Jul</p>
               <p className="mt-2">
-                Assisted in the development of interactive websites and web applications using HTML, CSS, JavaScript, and React.
+                Contributed to backend development using Python Djangon and Flask. I have gained practical knowledge in Python threading, API development and server management.
               </p>
             </div>
           </motion.div>

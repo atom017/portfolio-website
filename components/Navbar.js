@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-900 text-white fixed w-full z-50">
       <div className="flex justify-between items-center p-5">
-        <div className="text-xl font-semibold">My Portfolio</div>
+        <div className="text-xl font-semibold"> <span className='text-blue-500'>K</span>hai's Portfolio</div>
 
         {/* Desktop Navbar Links */}
         <div className="hidden md:flex space-x-6">

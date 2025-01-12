@@ -12,8 +12,8 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        'service_bwf2yz3', // Replace with your service ID
-        'template_vvw3fsd', // Replace with your template ID
+        'service_bwf2yz3',
+        'template_vvw3fsd',
         e.target,
         'hXMD3x5_-i73ckO31' // Replace with your public key
       )
@@ -23,14 +23,14 @@ const Contact = () => {
           setIsSubmitting(false);
           setTimeout(() => {
             setStateMessage(null);
-          }, 5000); // Hide message after 5 seconds
+          }, 5000);
         },
         (error) => {
           setStateMessage('Something went wrong, please try again later');
           setIsSubmitting(false);
           setTimeout(() => {
             setStateMessage(null);
-          }, 5000); // Hide message after 5 seconds
+          }, 5000);
         }
       );
   };
