@@ -6,9 +6,9 @@ const HomePage = () => {
       <div className="container mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center">
         {/* Left Side: Text Content */}
         <div className="text-center md:text-left mb-8 md:mb-0 md:w-1/2">
-          <h1 className="text-4xl font-semibold mb-4">Welcome to My Portfolio</h1>
+          <h1 className="text-4xl font-semibold mb-4">Hello, I'm <sapn className='text-blue-500'>KHT</sapn></h1>
           <p className="text-lg mb-6">
-            Hi, I'm John Doe, a passionate developer creating innovative and responsive web applications. Let's build something amazing together.
+            I am passionate developer creating innovative and responsive web applications. Let's build something amazing together.
           </p>
           <a
             href="#projects"

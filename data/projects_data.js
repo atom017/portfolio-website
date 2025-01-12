@@ -7,7 +7,8 @@ const projects_data = [
         "source": "https://github.com/atom017/e-commerce-frontend",
         "demo": "https://my-e-shop-frontend.onrender.com",
         "type": "Web",
-        "tags": ['React.js', 'Node.js', 'MongoDB']
+        "description": "E-commerce website developed with React, MongoD and  Express.js including user authentication and authorization.",
+        "tags": ['React.js', 'Node.js', 'MongoDB', 'Redux']
     },
     {
         "id": 1,
@@ -17,7 +18,7 @@ const projects_data = [
         "demo": "https://atom017-burmese-alphabet-recognition-system-main-page-65ovyw.streamlit.app/",
         "type": "AI",
         "description": "The System recognizes handwritten Burmese alphabets and give text as output",
-        "tags": ['Tensorflow', 'CNN', 'Scikit-learn', 'Streamlit']
+        "tags": ['Tensorflow', 'CNN', 'Streamlit']
     },
     {
         "id": 2,
@@ -31,12 +32,13 @@ const projects_data = [
     },
     {
         "id": 3,
-        "image": "https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "image": "projects/heart_disease_predict.png",
         "name": "Heart Disease Prediction",
         "source": "",
         "demo": "",
+        "description": "A simple machine learning program that utilizes patient's information to predict one can happen heart-disease or not.",
         "type": "AI",
-        "tags": ["CNN", "Scikit-learn", "Streamlit"]
+        "tags": ["Classification", "Scikit-learn", "Streamlit"]
     },
 
     {
