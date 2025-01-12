@@ -64,7 +64,7 @@ const Contact = () => {
           <div className="mt-8 text-center lg:text-left text-sm text-gray-400">
             <p>Or you can reach me directly at:</p>
             <a
-              href="mailto:your-email@example.com"
+              href="mailto:your-email@gmail.com"
               className="text-blue-400 hover:text-blue-500"
             >
               khaing.hsu.thwe.dev@example.com
