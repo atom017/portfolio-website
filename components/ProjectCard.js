@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const ProjectCard = ({ title, demoLink, sourceLink, image, techIcons, tags, description }) => {
   return (
-    <div className="group h-72 w-80  [perspective:1000px] border-2 border-gray-600 rounded-xl">
+    <div className="group h-80 sm:h-80 md:h-96 lg:h-72 w-96 sm:w-96 md:w-[28rem] lg:w-80 [perspective:1000px] border-2 border-gray-600 rounded-xl">
       <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-700 ease-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
 
         {/* Front Face: Image and Title */}

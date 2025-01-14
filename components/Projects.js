@@ -6,7 +6,7 @@ import Link from 'next/link';
 const Projects = () => {
 
   return (
-    <section id="projects" className="p-20 bg-gray-900 text-white">
+    <section id="projects" className="p-8 lg:p-20 bg-gray-900 text-white">
       <motion.div
         className="space-y-10"
         initial={{ opacity: 0 }}

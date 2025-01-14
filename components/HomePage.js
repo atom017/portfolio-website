@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const HomePage = () => {
   return (
-    <section id="home" className="flex items-center justify-center bg-gray-900 text-white h-screens pt-24">
+    <section id="home" className="flex items-center justify-center bg-gray-900 text-white h-screens pt-24 ">
       <div className="container mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center">
         {/* Left Side: Text Content */}
         <div className="text-center md:text-left mb-8 md:mb-0 md:w-1/2">
@@ -22,11 +22,11 @@ const HomePage = () => {
         <div className="w-full md:w-1/2 flex justify-center">
           <div className="relative w-48 h-48 md:w-72 md:h-72 rounded-full  overflow-hidden shadow-lg mb-5">
             <img
-              src="/Khaing_Hsu_Thwe.png"
+              src="/KHT.png"
               alt="Profile Image"
               layout="fill"
               objectFit="contain"
-              className="w-full h-full rounded-full bg-white"
+              className="w-full h-full rounded-full bg-white "
             />
           </div>
         </div>
