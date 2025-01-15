@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaUser, FaEnvelope, FaComment, FaTelegram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaUser, FaEnvelope, FaComment, FaTelegram } from 'react-icons/fa';
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
 
@@ -10,13 +10,13 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    // Use the environment variables that are prefixed with NEXT_PUBLIC_
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
+
     emailjs
-      .sendForm(
-        'service_bwf2yz3',
-        'template_vvw3fsd',
-        e.target,
-        'hXMD3x5_-i73ckO31' // Replace with your public key
-      )
+      .sendForm(serviceId, templateId, e.target, userId)
       .then(
         (result) => {
           setStateMessage('Message sent!');
@@ -38,8 +38,7 @@ const Contact = () => {
   return (
     <section id="contact" className="px-8 py-10 md:px-12 lg:px-20 bg-gray-900 text-white">
       {/* <h2 className="text-3xl text-center font-semibold mb-6">Contact</h2> */}
-      {/* Flexbox Layout for Large Screens */}
-      <div className="flex flex-col lg:flex-row  justify-between gap-12">
+      <div className="flex flex-col lg:flex-row justify-between gap-12">
         {/* Left Section: Introduction */}
         <div className="lg:w-1/3 text-center lg:text-left">
           <h2 className="text-3xl font-semibold mb-4">Let’s Connect</h2>
@@ -127,7 +126,11 @@ const Contact = () => {
           </form>
 
           {stateMessage && (
-            <div className="mt-6 text-center text-sm text-green-400">{stateMessage}</div>
+            <div
+              className={`mt-6 text-center text-sm ${stateMessage.includes('went wrong') ? 'text-red-500' : 'text-green-400'}`}
+            >
+              {stateMessage}
+            </div>
           )}
         </div>
       </div>

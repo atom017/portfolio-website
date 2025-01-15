@@ -1,11 +1,25 @@
+import { useState } from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import Link from 'next/link';
 
 const ProjectCard = ({ title, demoLink, sourceLink, image, techIcons, tags, description }) => {
-  return (
-    <div className="group h-80 sm:h-80 md:h-96 lg:h-72 w-96 sm:w-96 md:w-[28rem] lg:w-80 [perspective:1000px] border-2 border-gray-600 rounded-xl">
-      <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-700 ease-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  // State to track if the card is flipped
+  const [isFlipped, setIsFlipped] = useState(false);
 
+  // Toggle the card flip on click
+  const handleCardClick = () => {
+    setIsFlipped(!isFlipped);
+  };
+
+  return (
+    <div
+      className="h-80 sm:h-80 md:h-96 lg:h-72 w-96 sm:w-96 md:w-[28rem] lg:w-80 border-2 border-gray-600 rounded-xl cursor-pointer"
+      onClick={handleCardClick}
+    >
+      <div
+        className={`relative h-full w-full rounded-xl shadow-xl transition-all duration-700 ease-out ${isFlipped ? '[transform:rotateY(180deg)]' : ''
+          } [transform-style:preserve-3d]`}
+      >
         {/* Front Face: Image and Title */}
         <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
           <div className="relative w-full h-full">
