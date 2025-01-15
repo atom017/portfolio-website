@@ -18,12 +18,12 @@ const geistMono = Geist_Mono({
 });
 
 export default function Home() {
-  
+
   return (
     <div >
       <Navbar />
-      <main>
-        <HomePage/>
+      <main className="overflow-x-hidden">
+        <HomePage />
         <About />
         <Projects />
         <Experience />
