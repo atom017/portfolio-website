@@ -55,16 +55,7 @@ const Experience = () => {
           </motion.div>
         </div>
 
-        {/* Arrow for visual separation */}
-        <div className="text-center">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.5 }}
-          >
-            <FaArrowRight className="text-blue-500 text-3xl animate-bounce" />
-          </motion.div>
-        </div>
+
       </motion.div>
     </section>
   );

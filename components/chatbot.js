@@ -1,10 +1,14 @@
-import { useState } from "react";
-import { FaComment } from "react-icons/fa"; // Chat icon
+import { useState, useRef } from "react";
+import { FaComment, FaArrowsAlt } from "react-icons/fa"; // Changed resize icon to FaArrowsAlt
 
 const Chatbot = () => {
   const [message, setMessage] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
   const [isChatVisible, setChatVisible] = useState(false); // Toggle visibility
+  const [chatWidth, setChatWidth] = useState(320); // Initial width
+  const [chatHeight, setChatHeight] = useState(320); // Initial height
+  const chatWindowRef = useRef(null);
+  const resizingRef = useRef(false); // To track whether the user is resizing
 
   // Function to toggle chat visibility
   const toggleChat = () => setChatVisible(!isChatVisible);
@@ -12,7 +16,7 @@ const Chatbot = () => {
   // Handle message submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!message.trim()) return; // Don't submit empty messages
+    if (!message.trim()) return;
 
     const newChatHistory = [...chatHistory, { user: message }];
     setChatHistory(newChatHistory);
@@ -36,24 +40,56 @@ const Chatbot = () => {
     }
   };
 
+  // Function to handle resize
+  const handleMouseDown = (e) => {
+    resizingRef.current = true;
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+  };
+
+  const handleMouseMove = (e) => {
+    if (resizingRef.current) {
+      const newWidth = chatWindowRef.current.getBoundingClientRect().right - e.clientX;
+      const newHeight = chatWindowRef.current.getBoundingClientRect().bottom - e.clientY;
+
+      // Update chat size but set minimum width and height limits
+      if (newWidth > 150 && newHeight > 150) {
+        setChatWidth(newWidth);
+        setChatHeight(newHeight);
+      }
+    }
+  };
+
+  const handleMouseUp = () => {
+    resizingRef.current = false;
+    document.removeEventListener("mousemove", handleMouseMove);
+    document.removeEventListener("mouseup", handleMouseUp);
+  };
+
   return (
     <div>
       {/* Floating chat icon */}
       <button
         onClick={toggleChat}
-        className="fixed bottom-10 right-10 bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-600 transition duration-200">
+        className="fixed bottom-10 right-10 bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-600 transition duration-200 z-50"
+      >
         <FaComment size={24} />
       </button>
 
       {/* Chat window */}
       {isChatVisible && (
-        <div className="fixed bottom-10 right-10 bg-white shadow-2xl rounded-lg p-3 max-w-md w-full h-80 overflow-hidden border-2 border-blue-500">
+        <div
+          ref={chatWindowRef}
+          className="fixed bottom-10 right-10 bg-white shadow-2xl rounded-lg p-3 overflow-hidden border-2 border-blue-500 z-50"
+          style={{ width: `${chatWidth}px`, height: `${chatHeight}px` }}
+        >
           {/* Chat history */}
           <div className="space-y-4 overflow-y-auto h-60 max-h-64 text-black">
             {chatHistory.map((chat, index) => (
               <div key={index} className={`flex ${chat.user ? 'justify-end' : 'justify-start'}`}>
                 <div
-                  className={`p-3 rounded-xl max-w-xs ${chat.user ? 'bg-blue-100 text-blue-900' : 'bg-gray-100 text-gray-900'}`}>
+                  className={`p-3 rounded-xl max-w-xs ${chat.user ? 'bg-blue-100 text-blue-900' : 'bg-gray-100 text-gray-900'}`}
+                >
                   {chat.user || chat.bot}
                 </div>
               </div>
@@ -67,11 +103,12 @@ const Chatbot = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               className="border border-gray-300 p-3 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
-              placeholder="Ask me anything about my CV..."
+              placeholder="Ask about Khaing..."
             />
             <button
               type="submit"
-              className="bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              className="bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
               Send
             </button>
           </form>
@@ -79,9 +116,18 @@ const Chatbot = () => {
           {/* Close button */}
           <button
             onClick={toggleChat}
-            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 transition duration-200">
+            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 transition duration-200"
+          >
             <span className="font-bold text-xl">&times;</span>
           </button>
+
+          {/* Resize handle with a new icon */}
+          <div
+            onMouseDown={handleMouseDown}
+            className="absolute top-0 left-0 cursor-nwse-resize text-gray-600 w-6 h-6"
+          >
+            <FaArrowsAlt size={20} />
+          </div>
         </div>
       )}
     </div>
