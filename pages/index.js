@@ -6,6 +6,7 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Projects from "@/components/Projects";
 import HomePage from "@/components/HomePage";
+import Chatbot from "@/components/chatbot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +30,7 @@ export default function Home() {
         <Experience />
         <Contact />
       </main>
+      <Chatbot/>
     </div>
   );
 }
