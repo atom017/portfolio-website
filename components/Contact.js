@@ -75,28 +75,28 @@ const Contact = () => {
         <div className="lg:w-2/3 w-full">
           <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
             <div className="mb-4 relative">
-              <label htmlFor="name" className="block text-sm font-medium text-gray-300">Name</label>
+              <label htmlFor="user_name" className="block text-sm font-medium text-gray-300">Name</label>
               <div className="absolute left-3 top-8 text-gray-400">
                 <FaUser size={18} />
               </div>
               <input
                 type="text"
-                id="name"
-                name="name"
+                id="user_name"
+                name="user_name"
                 required
                 className="w-full p-2 pl-10 mt-2 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
             <div className="mb-4 relative">
-              <label htmlFor="email" className="block text-sm font-medium text-gray-300">Email</label>
+              <label htmlFor="user_email" className="block text-sm font-medium text-gray-300">Email</label>
               <div className="absolute left-3 top-8 text-gray-400">
                 <FaEnvelope size={18} />
               </div>
               <input
                 type="email"
-                id="email"
-                name="email"
+                id="user_email"
+                name="user_email"
                 required
                 className="w-full p-2 pl-10 mt-2 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500"
               />
