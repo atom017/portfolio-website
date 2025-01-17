@@ -53,7 +53,10 @@ function generatePrompt(cvData, userMessage) {
     Education: ${cvData.education.degree} from ${cvData.education.university} (Graduated: ${cvData.education.year})
     
     Projects:
-    ${cvData.projects.map(project => `- ${project.name}: ${project.description}`).join("\n")}
+    ${cvData.projects.map(project => `- ${project.name}: ${project.description}, tags: ${project.tags}`).join("\n")}
+
+    Certificates:
+    ${cvData.certificates.map(c => `- ${c.name} issued From ${c.organization} at ${c.issued}`).join("\n")}
   `;
 
   // The user message and the instructions for the chatbot
