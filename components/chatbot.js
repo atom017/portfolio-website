@@ -1,26 +1,33 @@
 import { useState, useRef } from "react";
-import { FaComment, FaArrowsAlt } from "react-icons/fa"; // Changed resize icon to FaArrowsAlt
+import { FaRobot } from "react-icons/fa";
 
 const Chatbot = () => {
   const [message, setMessage] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
-  const [isChatVisible, setChatVisible] = useState(false); // Toggle visibility
-  const [chatWidth, setChatWidth] = useState(320); // Initial width
-  const [chatHeight, setChatHeight] = useState(320); // Initial height
+  const [isChatVisible, setChatVisible] = useState(false); 
+  const [chatWidth, setChatWidth] = useState(320); 
+  const [chatHeight, setChatHeight] = useState(320); 
   const chatWindowRef = useRef(null);
-  const resizingRef = useRef(false); // To track whether the user is resizing
+  const resizingRef = useRef(false); 
 
-  // Function to toggle chat visibility
-  const toggleChat = () => setChatVisible(!isChatVisible);
+  // default bot message
+  const toggleChat = () => {
+    setChatVisible(!isChatVisible);
+    if (!isChatVisible) {
+      setChatHistory([
+        { bot: "Hi, I'm Khaing's personal assistant chatbot." },
+      ]); 
+    }
+  };
 
-  // Handle message submission
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!message.trim()) return;
 
     const newChatHistory = [...chatHistory, { user: message }];
     setChatHistory(newChatHistory);
-    setMessage(""); // Clear input field
+    setMessage(""); 
 
     try {
       const response = await fetch("/api/chatbot", {
@@ -40,7 +47,7 @@ const Chatbot = () => {
     }
   };
 
-  // Function to handle resize
+  //  handle resize
   const handleMouseDown = (e) => {
     resizingRef.current = true;
     document.addEventListener("mousemove", handleMouseMove);
@@ -52,7 +59,7 @@ const Chatbot = () => {
       const newWidth = chatWindowRef.current.getBoundingClientRect().right - e.clientX;
       const newHeight = chatWindowRef.current.getBoundingClientRect().bottom - e.clientY;
 
-      // Update chat size but set minimum width and height limits
+     
       if (newWidth > 150 && newHeight > 150) {
         setChatWidth(newWidth);
         setChatHeight(newHeight);
@@ -68,22 +75,22 @@ const Chatbot = () => {
 
   return (
     <div>
-      {/* Floating chat icon */}
+
       <button
         onClick={toggleChat}
         className="fixed bottom-10 right-10 bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-600 transition duration-200 z-50"
       >
-        <FaComment size={24} />
+        <FaRobot size={24} />
       </button>
 
-      {/* Chat window */}
+     
       {isChatVisible && (
         <div
           ref={chatWindowRef}
           className="fixed bottom-10 right-10 bg-white shadow-2xl rounded-lg p-3 overflow-hidden border-2 border-blue-500 z-50"
           style={{ width: `${chatWidth}px`, height: `${chatHeight}px` }}
         >
-          {/* Chat history */}
+          
           <div className="space-y-4 overflow-y-auto h-60 max-h-64 text-black">
             {chatHistory.map((chat, index) => (
               <div key={index} className={`flex ${chat.user ? 'justify-end' : 'justify-start'}`}>
@@ -96,7 +103,7 @@ const Chatbot = () => {
             ))}
           </div>
 
-          {/* Message input form */}
+          
           <form onSubmit={handleSubmit} className="flex space-x-2 mt-4">
             <input
               type="text"
@@ -113,7 +120,7 @@ const Chatbot = () => {
             </button>
           </form>
 
-          {/* Close button */}
+          
           <button
             onClick={toggleChat}
             className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 transition duration-200"
@@ -121,12 +128,12 @@ const Chatbot = () => {
             <span className="font-bold text-xl">&times;</span>
           </button>
 
-          {/* Resize handle with a new icon */}
+          
           <div
             onMouseDown={handleMouseDown}
             className="absolute top-0 left-0 cursor-nwse-resize text-gray-600 w-6 h-6"
           >
-            <FaArrowsAlt size={20} />
+            {/* Resize icon */}
           </div>
         </div>
       )}
