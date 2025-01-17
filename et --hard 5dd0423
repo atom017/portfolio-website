@@ -1,0 +1,23 @@
+[33m5dd0423[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mversion[m[33m, [m[1;31morigin/version[m[33m)[m includes certification in prompt
+[33me0c7cbe[m add default chatbot message
+[33me3789a3[m [update] chat area resizable
+[33mf94182b[m [fix] fixed contact indications
+[33mef4a39a[m [add] integrated personal chatbot
+[33m686535a[m [fix] fixed title structure
+[33mf7f9c30[m [fix] remove redundant intro in About
+[33mfa36911[m [fix] change card toggle and change email key
+[33m1798776[m [fix] add galaxy effect
+[33m2a0f263[m [fix] chage card width
+[33mf269b68[m [fix] social Links
+[33m252a633[m [fix] fixed email spelling
+[33m49346ae[m [udate] finish up info
+[33md385f10[m [udate] update UI design for project card and contact
+[33mb67496c[m [udate] update UI design
+[33mfcdb9c9[m Merge branch 'version' of github.com:atom017/portfolio-website into version
+[33mcba316e[m [udate] projects data change
+[33me4d1e63[m [update] added services in about section
+[33m8b4d30e[m change card style
+[33m7fc687d[m [udate] layout style change to all components
+[33m185ed3e[m [add] add projects data
+[33m97e99c7[m[33m ([m[1;31morigin/version2[m[33m, [m[1;32mversion2[m[33m)[m first commit
+[33m05694cc[m[33m ([m[1;32mmain[m[33m)[m Initial commit from Create Next App

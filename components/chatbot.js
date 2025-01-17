@@ -9,6 +9,9 @@ const Chatbot = () => {
   const [chatHeight, setChatHeight] = useState(320); 
   const chatWindowRef = useRef(null);
   const resizingRef = useRef(false); 
+  const apiUrl = process.env.NODE_ENV === "production" 
+  ? "https://khaing-hsu-thwe.vercel.app/api/chatbot" 
+  : "/api/chatbot"; 
 
   // default bot message
   const toggleChat = () => {
@@ -30,7 +33,7 @@ const Chatbot = () => {
     setMessage(""); 
 
     try {
-      const response = await fetch("/api/chatbot", {
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -78,7 +81,7 @@ const Chatbot = () => {
 
       <button
         onClick={toggleChat}
-        className="fixed bottom-10 right-10 bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-600 transition duration-200 z-50"
+        className="fixed bottom-10 right-10 bg-gradient-to-r from-blue-50 to-indigo-50 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-600 transition duration-200 z-50"
       >
         <FaRobot size={24} />
       </button>
