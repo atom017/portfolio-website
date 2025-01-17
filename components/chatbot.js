@@ -81,10 +81,11 @@ const Chatbot = () => {
 
       <button
         onClick={toggleChat}
-        className="fixed bottom-10 right-10 bg-gradient-to-r from-blue-50 to-indigo-50 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-600 transition duration-200 z-50"
+        className="fixed bottom-10 right-10 bg-gradient-to-r from-orange-500 to-red-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-orange-600 hover:to-red-600 transition duration-200 z-50"
       >
         <FaRobot size={24} />
       </button>
+
 
      
       {isChatVisible && (
