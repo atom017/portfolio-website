@@ -1,15 +1,43 @@
 import Groq from "groq-sdk";
+import Cors from 'cors';
 
-// Initialize Groq with your API key
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
+const allowedOrigins = [
+  'https://portfolio-website-5a5prabav-atom017s-projects.vercel.app', // First allowed origin
+  'https://khaing-hsu-thwe.vercel.com', // Second allowed origin
+];
+
+// Initialize CORS middleware
+const cors = Cors({
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type'],
+  origin: (origin, callback) => {
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, origin); 
+    } else {
+      callback(new Error('Not allowed by CORS'), false); 
+    }
+  },
+});
+
+// Helper function to run middleware
+const runCors = (req, res) =>
+  new Promise((resolve, reject) => {
+    cors(req, res, (result) => {
+      if (result instanceof Error) {
+        reject(result);
+      }
+      resolve(result);
+    });
+  });
+
 export default async function handler(req, res) {
+  await runCors(req, res);
   const { message } = req.body;
 
-  // Parse CV data from environment variable
   const cvData = JSON.parse(process.env.CV_DATA);
 
-  // Customize the prompt template
   const prompt = generatePrompt(cvData, message);
 
   try {
@@ -24,7 +52,7 @@ export default async function handler(req, res) {
       model: "llama-3.3-70b-versatile",  // Use the model you want
     });
 
-    // Return the response from Groq
+
     res.status(200).json({ response: chatCompletion.choices[0]?.message?.content || "" });
   } catch (error) {
     console.error(error);
