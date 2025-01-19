@@ -3,7 +3,6 @@ import Cors from 'cors';
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
-console.log(process.env.GROQ_API_KEY)
 const allowedOrigins = [
   'https://portfolio-website-5a5prabav-atom017s-projects.vercel.app', // First allowed origin
   'https://khaing-hsu-thwe.vercel.com',
@@ -40,7 +39,7 @@ export default async function handler(req, res) {
   const { message } = req.body;
 
   const cvData = JSON.parse(process.env.CV_DATA);
-
+  console.log(cvData)
   const prompt = generatePrompt(cvData, message);
 
   try {
