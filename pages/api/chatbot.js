@@ -39,7 +39,7 @@ export default async function handler(req, res) {
   const { message } = req.body;
 
   const cvData = JSON.parse(process.env.CV_DATA);
-  console.log(cvData)
+
   const prompt = generatePrompt(cvData, message);
 
   try {
