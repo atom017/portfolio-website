@@ -4,14 +4,14 @@ import { FaRobot } from "react-icons/fa";
 const Chatbot = () => {
   const [message, setMessage] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
-  const [isChatVisible, setChatVisible] = useState(false); 
-  const [chatWidth, setChatWidth] = useState(320); 
-  const [chatHeight, setChatHeight] = useState(320); 
+  const [isChatVisible, setChatVisible] = useState(false);
+  const [chatWidth, setChatWidth] = useState(320);
+  const [chatHeight, setChatHeight] = useState(320);
   const chatWindowRef = useRef(null);
-  const resizingRef = useRef(false); 
-  const apiUrl = process.env.NODE_ENV === "production" 
-  ? "https://khaing-hsu-thwe.vercel.app/api/chatbot" 
-  : "/api/chatbot"; 
+  const resizingRef = useRef(false);
+  const apiUrl = process.env.NODE_ENV === "production"
+    ? "https://khaing-hsu-thwe.vercel.app/api/chatbot"
+    : "/api/chatbot";
 
   // default bot message
   const toggleChat = () => {
@@ -19,7 +19,7 @@ const Chatbot = () => {
     if (!isChatVisible) {
       setChatHistory([
         { bot: "Hi, I'm Khaing's personal assistant chatbot." },
-      ]); 
+      ]);
     }
   };
 
@@ -30,7 +30,7 @@ const Chatbot = () => {
 
     const newChatHistory = [...chatHistory, { user: message }];
     setChatHistory(newChatHistory);
-    setMessage(""); 
+    setMessage("");
 
     try {
       const response = await fetch(apiUrl, {
@@ -46,7 +46,7 @@ const Chatbot = () => {
         setChatHistory([...newChatHistory, { bot: data.response }]);
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.log("Error:", error);
     }
   };
 
@@ -62,7 +62,7 @@ const Chatbot = () => {
       const newWidth = chatWindowRef.current.getBoundingClientRect().right - e.clientX;
       const newHeight = chatWindowRef.current.getBoundingClientRect().bottom - e.clientY;
 
-     
+
       if (newWidth > 150 && newHeight > 150) {
         setChatWidth(newWidth);
         setChatHeight(newHeight);
@@ -87,14 +87,14 @@ const Chatbot = () => {
       </button>
 
 
-     
+
       {isChatVisible && (
         <div
           ref={chatWindowRef}
           className="fixed bottom-10 right-10 bg-white shadow-2xl rounded-lg p-3 overflow-hidden border-2 border-blue-500 z-50"
           style={{ width: `${chatWidth}px`, height: `${chatHeight}px` }}
         >
-          
+
           <div className="space-y-4 overflow-y-auto h-60 max-h-64 text-black">
             {chatHistory.map((chat, index) => (
               <div key={index} className={`flex ${chat.user ? 'justify-end' : 'justify-start'}`}>
@@ -107,7 +107,7 @@ const Chatbot = () => {
             ))}
           </div>
 
-          
+
           <form onSubmit={handleSubmit} className="flex space-x-2 mt-4">
             <input
               type="text"
@@ -124,7 +124,7 @@ const Chatbot = () => {
             </button>
           </form>
 
-          
+
           <button
             onClick={toggleChat}
             className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 transition duration-200"
@@ -132,7 +132,7 @@ const Chatbot = () => {
             <span className="font-bold text-xl">&times;</span>
           </button>
 
-          
+
           <div
             onMouseDown={handleMouseDown}
             className="absolute top-0 left-0 cursor-nwse-resize text-gray-600 w-6 h-6"

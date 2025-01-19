@@ -5,7 +5,8 @@ const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 const allowedOrigins = [
   'https://portfolio-website-5a5prabav-atom017s-projects.vercel.app', // First allowed origin
-  'https://khaing-hsu-thwe.vercel.com', // Second allowed origin
+  'https://khaing-hsu-thwe.vercel.com',
+  'http://localhost:3000'
 ];
 
 // Initialize CORS middleware
@@ -14,9 +15,9 @@ const cors = Cors({
   allowedHeaders: ['Content-Type'],
   origin: (origin, callback) => {
     if (allowedOrigins.includes(origin) || !origin) {
-      callback(null, origin); 
+      callback(null, origin);
     } else {
-      callback(new Error('Not allowed by CORS'), false); 
+      callback(new Error('Not allowed by CORS'), false);
     }
   },
 });
