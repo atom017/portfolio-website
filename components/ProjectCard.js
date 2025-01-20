@@ -34,7 +34,7 @@ const ProjectCard = ({ title, demoLink, sourceLink, image, techIcons, tags, desc
             {/* Half overlay at the bottom of the image */}
             <div className="absolute bottom-0 left-0 w-full h-1/4 bg-black/50 rounded-b-xl"></div>
 
-            <div className="absolute bottom-2 left-2 right-2 text-white text-center z-10">
+            <div className="absolute bottom-0 left-0 right-0 h-1/4 flex items-center justify-center text-white text-center z-10">
               <h3 className="text-lg md:text-xl font-semibold">{title}</h3>
             </div>
           </div>
@@ -56,14 +56,14 @@ const ProjectCard = ({ title, demoLink, sourceLink, image, techIcons, tags, desc
             {/* Links moved to the back face */}
             <div className="flex justify-center space-x-3 mt-3">
               {/* Source Code Link */}
-              <Link href={sourceLink}>
+              <Link href={sourceLink} target='_blank' rel="noopener noreferrer">
                 <div className="bg-gray-800 text-white py-1 px-3 rounded-lg hover:bg-gray-700 transition duration-300 ease-in-out flex items-center space-x-2 cursor-pointer">
                   <FaGithub size={16} />
                   <span className="text-xs md:text-sm">Code</span>
                 </div>
               </Link>
 
-              {demoLink && <Link href={demoLink}>
+              {demoLink && <Link href={demoLink} target='_blank' rel="noopener noreferrer">
                 <div className="bg-blue-600 text-white py-1 px-3 rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out flex items-center space-x-2 cursor-pointer">
                   <FaExternalLinkAlt size={16} />
                   <span className="text-xs md:text-sm">Demo</span>
