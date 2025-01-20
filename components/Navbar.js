@@ -30,6 +30,11 @@ const Navbar = () => {
     };
   }, []);
 
+  // Function to close the menu when a link is clicked
+  const handleLinkClick = () => {
+    setMenuOpen(false); // Close the menu
+  };
+
   return (
     <nav className="bg-gray-900 text-white fixed w-full z-50">
       <div className="flex justify-between items-center p-5">
@@ -40,35 +45,35 @@ const Navbar = () => {
           <Link
             href="#home"
             className={`${activeSection === 'home' ? 'text-blue-500' : 'text-white'
-              } hover:text-gray-400`}
+              } hover:text-blue-400`}
           >
             Home
           </Link>
           <Link
             href="#about"
             className={`${activeSection === 'about' ? 'text-blue-500' : 'text-white'
-              } hover:text-gray-400`}
+              } hover:text-blue-400`}
           >
             About
           </Link>
           <Link
             href="#projects"
             className={`${activeSection === 'projects' ? 'text-blue-500' : 'text-white'
-              } hover:text-gray-400`}
+              } hover:text-blue-400`}
           >
             Projects
           </Link>
           <Link
             href="#experience"
             className={`${activeSection === 'experience' ? 'text-blue-500' : 'text-white'
-              } hover:text-gray-400`}
+              } hover:text-blue-400`}
           >
             Experience
           </Link>
           <Link
             href="#contact"
             className={`${activeSection === 'contact' ? 'text-blue-500' : 'text-white'
-              } hover:text-gray-400`}
+              } hover:text-blue-400`}
           >
             Contact
           </Link>
@@ -83,7 +88,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <motion.div
-          className="md:hidden bg-gray-800 p-6 space-y-6"
+          className="md:hidden bg-gray-800 p-6 space-y-6 h-screen"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
@@ -93,35 +98,40 @@ const Navbar = () => {
             <Link
               href="#home"
               className={`${activeSection === 'home' ? 'text-blue-500' : 'text-white'
-                } hover:text-gray-400`}
+                } hover:text-blue-400`}
+              onClick={handleLinkClick} // Close the menu on link click
             >
               Home
             </Link>
             <Link
               href="#about"
               className={`${activeSection === 'about' ? 'text-blue-500' : 'text-white'
-                } hover:text-gray-400`}
+                } hover:text-blue-400`}
+              onClick={handleLinkClick} // Close the menu on link click
             >
               About
             </Link>
             <Link
               href="#projects"
               className={`${activeSection === 'projects' ? 'text-blue-500' : 'text-white'
-                } hover:text-gray-400`}
+                } hover:text-blue-400`}
+              onClick={handleLinkClick} // Close the menu on link click
             >
               Projects
             </Link>
             <Link
               href="#experience"
               className={`${activeSection === 'experience' ? 'text-blue-500' : 'text-white'
-                } hover:text-gray-400`}
+                } hover:text-blue-400`}
+              onClick={handleLinkClick} // Close the menu on link click
             >
               Experience
             </Link>
             <Link
               href="#contact"
               className={`${activeSection === 'contact' ? 'text-blue-500' : 'text-white'
-                } hover:text-gray-400`}
+                } hover:text-blue-400`}
+              onClick={handleLinkClick} // Close the menu on link click
             >
               Contact
             </Link>
