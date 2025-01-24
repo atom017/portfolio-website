@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <g fill="none" stroke="#333" stroke-width="12">
+    <!-- "K" with a serif touch -->
+    <path d="M60 40 L40 100 L60 160" />
+    <!-- "H" with defined horizontal bar -->
+    <path d="M80 40 L80 160 M80 80 L120 80" />
+    <!-- "T" with elegant cross bar -->
+    <path d="M140 40 L140 160 M120 40 L160 40" />
+  </g>
+</svg>
