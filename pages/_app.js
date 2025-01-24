@@ -7,6 +7,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <title>Khaing Hsu Thwe</title>
+        <link rel="icon" href="/name/3d.svg" type="image/svg+xml" />
       </Head>
       <Component {...pageProps} />
     </>
