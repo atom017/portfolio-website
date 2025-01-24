@@ -21,7 +21,7 @@ const ProjectCard = ({ title, demoLink, sourceLink, image, techIcons, tags, desc
           } [transform-style:preserve-3d]`}
       >
         {/* Front Face: Image and Title */}
-        <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
+        <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden] z-10">
           <div className="relative w-full h-full">
             {image && (
               <img
@@ -34,14 +34,14 @@ const ProjectCard = ({ title, demoLink, sourceLink, image, techIcons, tags, desc
             {/* Half overlay at the bottom of the image */}
             <div className="absolute bottom-0 left-0 w-full h-1/4 bg-black/50 rounded-b-xl"></div>
 
-            <div className="absolute bottom-0 left-0 right-0 h-1/4 flex items-center justify-center text-white text-center z-10">
+            <div className="absolute bottom-0 left-0 right-0 h-1/4 flex items-center justify-center text-white text-center z-20">
               <h3 className="text-lg md:text-xl font-semibold">{title}</h3>
             </div>
           </div>
         </div>
 
         {/* Back Face: Code Link, Demo Link, Tags, Description */}
-        <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-6 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+        <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-6 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden] z-30">
           <div className="flex min-h-full flex-col items-center justify-center">
             <h3 className="text-xl md:text-2xl font-semibold mb-3">{title}</h3>
             {/* Tags */}
