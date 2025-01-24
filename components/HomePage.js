@@ -36,13 +36,13 @@ const HomePage = () => {
       <div className="container mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center relative z-10">
         {/* Left Side: Text Content */}
         <div className="text-center md:text-left mb-8 md:mb-0 md:w-1/2">
-          <h1 className="text-3xl lg:text-4xl font-semibold mb-4">Hello, I'm <span className='text-blue-500'>Khaing Hsu Thwe</span></h1>
+          <h1 className="text-3xl lg:text-4xl font-semibold mb-4">Hello, I'm <span className='text-[#8c6fc4]'>Khaing Hsu Thwe</span></h1>
           <p className="text-lg mb-6">
             I am passionate software engineer creating innovative projects on machine learning and web development. I have done real world projects related to machine learning and full-stack developments.
           </p>
           <a
             href="#projects"
-            className="bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300"
+            className="bg-[#8c6fc4] text-white py-3 px-6 rounded-lg hover:bg-[#a78ec8] transition duration-300"
           >
             View Projects
           </a>
@@ -56,7 +56,7 @@ const HomePage = () => {
               alt="Profile Image"
               layout="fill"
               objectFit="contain"
-              className="w-full h-full rounded-full bg-white"
+              className="w-full h-full rounded-full bg-[#8c6fc4]"
             />
           </div>
         </div>

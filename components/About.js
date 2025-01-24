@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaNodeJs, FaGitAlt, FaDocker, FaFlask } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaNodeJs, FaGitAlt, FaDocker, FaFlask, FaCamera } from 'react-icons/fa';
 import { SiDjango, SiTensorflow, SiPostman } from 'react-icons/si';
 import { FaCogs, FaRobot, FaCloud, FaLaptopCode } from 'react-icons/fa';  // Add new icons
 
@@ -43,28 +43,29 @@ const About = () => {
         </motion.h2>
         <motion.div className="flex flex-wrap justify-center gap-8">
           {/* API Development */}
-          <div className="text-3xl flex flex-col items-center bg-blue-600 p-6 rounded-lg shadow-lg w-80">
+          <div className="text-3xl flex flex-col items-center bg-[#8c6fc4] p-6 rounded-lg shadow-lg w-80">
             <FaCogs />
             <p className="mt-2 text-sm">API Development</p>
             <p className="text-xs  mt-2">I specialize in building robust APIs that power your applications, ensuring smooth and efficient communication between the front-end and back-end.</p>
           </div>
 
           {/* Chatbot Development */}
-          <div className="text-3xl flex flex-col items-center bg-blue-600 p-6 rounded-lg shadow-lg w-80">
+          <div className="text-3xl flex flex-col items-center bg-[#8c6fc4] p-6 rounded-lg shadow-lg w-80">
             <FaRobot />
             <p className="mt-2 text-sm">Chatbot Development</p>
             <p className="text-xs  mt-2">Creating intelligent chatbots that automate customer support and enhance user engagement through advanced AI and natural language processing techniques.</p>
           </div>
 
-          {/* Deployment */}
-          <div className="text-3xl flex flex-col items-center bg-blue-600 p-6 rounded-lg shadow-lg w-80">
-            <FaCloud />
-            <p className="mt-2 text-sm">Deployment</p>
-            <p className="text-xs mt-2">I handle deployment of applications on various platforms, ensuring smooth operations and scalability for your projects in cloud environments.</p>
+          {/* Computer Vision */}
+          <div className="text-3xl flex flex-col items-center bg-[#8c6fc4] p-6 rounded-lg shadow-lg w-80">
+            <FaCamera />
+            <p className="mt-2 text-sm">Computer Vision</p>
+            <p className="text-xs mt-2">I specialize in developing applications involving computer vision techniques such as image recognition, object detection, and tracking, leveraging advanced machine learning models.</p>
           </div>
 
+
           {/* Fullstack Development */}
-          <div className="text-3xl flex flex-col items-center bg-blue-600 p-6 rounded-lg shadow-lg w-80">
+          <div className="text-3xl flex flex-col items-center bg-[#8c6fc4] p-6 rounded-lg shadow-lg w-80">
             <FaLaptopCode />
             <p className="mt-2 text-sm">Fullstack Development</p>
             <p className="text-xs  mt-2">From the front-end to the back-end, I create full-stack web applications that are fast, scalable, and user-friendly, using modern frameworks and technologies.</p>

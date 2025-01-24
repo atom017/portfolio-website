@@ -64,7 +64,7 @@ const Contact = () => {
             <p>Or you can reach me directly at:</p>
             <a
               href="mailto:your-email@gmail.com"
-              className="text-blue-400 hover:text-blue-500"
+              className="text-[#a78ec8] hover:text-[#8c6fc4]"
             >
               khaing.hsu.thwe.dev@gmail.com
             </a>
@@ -118,7 +118,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className={`w-full p-3 mt-4 bg-blue-500 text-white rounded-lg ${isSubmitting ? 'cursor-not-allowed' : ''}`}
+              className={`w-full p-3 mt-4 bg-[#8c6fc4] hover:bg-[#a78ec8] text-white rounded-lg ${isSubmitting ? 'cursor-not-allowed' : ''}`}
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}

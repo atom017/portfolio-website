@@ -26,7 +26,7 @@ const Experience = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <div className="text-blue-500 text-4xl relative z-10">
+            <div className="text-[#8c6fc4] text-4xl relative z-10">
               <FaBriefcase />
             </div>
             <div>
@@ -45,7 +45,7 @@ const Experience = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <div className="text-blue-500 text-4xl relative z-10">
+            <div className="text-[#8c6fc4] text-4xl relative z-10">
               <FaBriefcase />
             </div>
             <div>

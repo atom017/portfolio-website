@@ -38,42 +38,42 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-900 text-white fixed w-full z-50">
       <div className="flex justify-between items-center p-5">
-        <div className="text-xl font-semibold"> <span className='text-blue-500'>Khaing</span>'s Portfolio</div>
+        <div className="text-xl font-semibold"> <span className='text-[#a78ec8]'>Khaing</span>'s Portfolio</div>
 
         {/* Desktop Navbar Links */}
         <div className="hidden md:flex space-x-6">
           <Link
             href="#home"
-            className={`${activeSection === 'home' ? 'text-blue-500' : 'text-white'
-              } hover:text-blue-400`}
+            className={`${activeSection === 'home' ? 'text-[#8c6fc4]' : 'text-white'
+              } hover:text-[#a78ec8]`}
           >
             Home
           </Link>
           <Link
             href="#about"
-            className={`${activeSection === 'about' ? 'text-blue-500' : 'text-white'
-              } hover:text-blue-400`}
+            className={`${activeSection === 'about' ? 'text-[#8c6fc4]' : 'text-white'
+              } hover:text-[#a78ec8]`}
           >
             About
           </Link>
           <Link
             href="#projects"
-            className={`${activeSection === 'projects' ? 'text-blue-500' : 'text-white'
-              } hover:text-blue-400`}
+            className={`${activeSection === 'projects' ? 'text-[#8c6fc4]' : 'text-white'
+              } hover:text-[#a78ec8]`}
           >
             Projects
           </Link>
           <Link
             href="#experience"
-            className={`${activeSection === 'experience' ? 'text-blue-500' : 'text-white'
-              } hover:text-blue-400`}
+            className={`${activeSection === 'experience' ? 'text-[#8c6fc4]' : 'text-white'
+              } hover:text-[#a78ec8]`}
           >
             Experience
           </Link>
           <Link
             href="#contact"
-            className={`${activeSection === 'contact' ? 'text-blue-500' : 'text-white'
-              } hover:text-blue-400`}
+            className={`${activeSection === 'contact' ? 'text-[#8c6fc4]' : 'text-white'
+              } hover:text-[#a78ec8]`}
           >
             Contact
           </Link>
@@ -97,40 +97,40 @@ const Navbar = () => {
           <div className="flex flex-col items-center space-y-4">
             <Link
               href="#home"
-              className={`${activeSection === 'home' ? 'text-blue-500' : 'text-white'
-                } hover:text-blue-400`}
+              className={`${activeSection === 'home' ? 'text-[#8c6fc4]' : 'text-white'
+                } hover:text-[#a78ec8]`}
               onClick={handleLinkClick} // Close the menu on link click
             >
               Home
             </Link>
             <Link
               href="#about"
-              className={`${activeSection === 'about' ? 'text-blue-500' : 'text-white'
-                } hover:text-blue-400`}
+              className={`${activeSection === 'about' ? 'text-[#8c6fc4]' : 'text-white'
+                } hover:text-[#a78ec8]`}
               onClick={handleLinkClick} // Close the menu on link click
             >
               About
             </Link>
             <Link
               href="#projects"
-              className={`${activeSection === 'projects' ? 'text-blue-500' : 'text-white'
-                } hover:text-blue-400`}
+              className={`${activeSection === 'projects' ? 'text-[#8c6fc4]' : 'text-white'
+                } hover:text-[#a78ec8]`}
               onClick={handleLinkClick} // Close the menu on link click
             >
               Projects
             </Link>
             <Link
               href="#experience"
-              className={`${activeSection === 'experience' ? 'text-blue-500' : 'text-white'
-                } hover:text-blue-400`}
+              className={`${activeSection === 'experience' ? 'text-[#8c6fc4]' : 'text-white'
+                } hover:text-[#a78ec8]`}
               onClick={handleLinkClick} // Close the menu on link click
             >
               Experience
             </Link>
             <Link
               href="#contact"
-              className={`${activeSection === 'contact' ? 'text-blue-500' : 'text-white'
-                } hover:text-blue-400`}
+              className={`${activeSection === 'contact' ? 'text-[#8c6fc4]' : 'text-white'
+                } hover:text-[#a78ec8]`}
               onClick={handleLinkClick} // Close the menu on link click
             >
               Contact
