@@ -48,7 +48,7 @@ const Contact = () => {
 
           {/* Social Media Links */}
           <div className="flex justify-center lg:justify-start space-x-6 mt-6">
-            <a href="https://github.com/atom017" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/khainghsuthwe" target="_blank" rel="noopener noreferrer">
               <FaGithub size={24} className="text-white hover:text-gray-400 transition duration-300" />
             </a>
             <a href="https://www.linkedin.com/in/khaing-hsu-thwe" target="_blank" rel="noopener noreferrer">
@@ -84,7 +84,7 @@ const Contact = () => {
                 id="user_name"
                 name="user_name"
                 required
-                className="w-full p-2 pl-10 mt-2 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2 pl-10 mt-2 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-[#a78ec8]"
               />
             </div>
 
