@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Gradient for 3D effect with more vibrant colors -->
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f0f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#555;stop-opacity:1" />
+    </linearGradient>
+    <!-- Shadow for 3D effect -->
+    <linearGradient id="shadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#333;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#111;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#grad)" stroke-width="15">
+    <!-- Background (Black) -->
+    <rect x="0" y="0" width="200" height="200" fill="black"/>
+
+    <!-- "K" -->
+    <path d="M60 40 L40 100 L60 160" stroke="url(#grad)" />
+    <path d="M60 40 L50 90 L60 160" stroke="url(#grad)" />
+    <path d="M60 40 L45 70 L60 160" stroke="url(#shadow)" stroke-width="15" stroke-opacity="0.5"/>
+    <path d="M60 40 L40 100 L60 160" stroke="url(#shadow)" stroke-width="15" stroke-opacity="0.4"/>
+
+    <!-- "H" -->
+    <path d="M80 40 Q75 70 80 160 M80 80 L120 80" stroke="url(#grad)" />
+    <path d="M80 40 Q85 70 80 160 M80 80 L120 80" stroke="url(#shadow)" stroke-width="15" stroke-opacity="0.5"/>
+    <path d="M80 40 Q85 70 80 160 M80 80 L120 80" stroke="url(#shadow)" stroke-width="15" stroke-opacity="0.4"/>
+
+    <!-- "T" -->
+    <path d="M140 40 Q145 60 140 160" stroke="url(#grad)" />
+    <path d="M140 40 L160 40" stroke="url(#grad)" />
+    <path d="M140 40 Q135 60 160 40" stroke="url(#shadow)" stroke-width="15" stroke-opacity="0.5"/>
+    <path d="M140 40 L135 60 L160 40" stroke="url(#shadow)" stroke-width="15" stroke-opacity="0.4"/>
+  </g>
+</svg>
