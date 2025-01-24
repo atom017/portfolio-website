@@ -1,10 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <g fill="none" stroke="#333" stroke-width="12">
-    <!-- "K" with a serif touch -->
+  <defs>
+    <!-- Gradient for 3D effect -->
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bbb;stop-opacity:1" />
+    </linearGradient>
+    <!-- Gradient for shadow effect -->
+    <linearGradient id="shadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#444;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#222;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#grad)" stroke-width="15">
+    <!-- "K" with more shadows -->
     <path d="M60 40 L40 100 L60 160" />
-    <!-- "H" with defined horizontal bar -->
+    <path d="M60 40 L45 70 L60 160" stroke-opacity="0.3"/>
+    <!-- Additional shadow for "K" -->
+    <path d="M60 40 L40 100 L60 160" stroke="url(#shadow)" stroke-width="15" stroke-opacity="0.5" />
+    <path d="M60 40 L45 70 L60 160" stroke="url(#shadow)" stroke-width="15" stroke-opacity="0.4"/>
+    
+    <!-- "H" with more shadows -->
     <path d="M80 40 L80 160 M80 80 L120 80" />
-    <!-- "T" with elegant cross bar -->
+    <path d="M80 40 L75 70 L120 80" stroke-opacity="0.3"/>
+    <!-- Additional shadow for "H" -->
+    <path d="M80 40 L80 160 M80 80 L120 80" stroke="url(#shadow)" stroke-width="15" stroke-opacity="0.5"/>
+    <path d="M80 40 L75 70 L120 80" stroke="url(#shadow)" stroke-width="15" stroke-opacity="0.4"/>
+    
+    <!-- "T" with more shadows -->
     <path d="M140 40 L140 160 M120 40 L160 40" />
+    <path d="M140 40 L135 60 L160 40" stroke-opacity="0.3"/>
+    <!-- Additional shadow for "T" -->
+    <path d="M140 40 L140 160 M120 40 L160 40" stroke="url(#shadow)" stroke-width="15" stroke-opacity="0.5"/>
+    <path d="M140 40 L135 60 L160 40" stroke="url(#shadow)" stroke-width="15" stroke-opacity="0.4"/>
   </g>
 </svg>
