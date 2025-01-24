@@ -7,7 +7,7 @@ const projects_data = [
         "source": "https://github.com/atom017/e-commerce-frontend",
         "demo": "https://my-e-shop-frontend.onrender.com",
         "type": "Web",
-        "description": "E-commerce website developed with React, MongoD and  Express.js including user authentication and authorization.",
+        "description": "E-commerce website developed with React, MongoD and  Express.js. Features include user authentication and authorization, cart, pagination and stripe integration. ",
         "tags": ['React.js', 'Node.js', 'MongoDB', 'Redux']
     },
     {
@@ -27,7 +27,7 @@ const projects_data = [
         "source": "https://github.com/atom017/chat_pdf",
         "demo": "https://chat-with-pdf-file.vercel.app/",
         "type": "AI",
-        "description": "Simple chat appliction to chat through rooms",
+        "description": "Simple chatbot that can answer based on input pdf file. User can ask to summarize and query the contents.",
         "tags": ['Llama3', 'Flask', 'Groq']
     },
     {
