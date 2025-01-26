@@ -71,9 +71,10 @@ function generatePrompt(cvData, userMessage) {
   `;
 
   const cvDataSection = `
-    Below is the CV data of Khaing Hsu Thwe:
+    Below is the professional background data of Khaing Hsu Thwe:
     
     Name: ${cvData.name}
+    Gender: ${cvData.gender}
     Role: ${cvData.role}
     Skills: ${cvData.skills.join(", ")}
     
