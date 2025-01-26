@@ -32,9 +32,11 @@ const Experience = () => {
             <div>
               <h3 className="text-xl font-semibold">Software Engineer at Global Walkers</h3>
               <p className="text-sm text-gray-400">2024 Feb- Present</p>
-              <p className="mt-2">
-                Responsible for building and maintaining object detection models, person tracking systems, and AI-related software applications.
-              </p>
+              <ul className="mt-2 list-disc pl-5 text-gray-400">
+                <li>Building and maintaining object detection models.</li>
+                <li>Developing person tracking systems.</li>
+                <li>Designing and implementing AI-related software applications.</li>
+              </ul>
             </div>
           </motion.div>
 
@@ -51,9 +53,11 @@ const Experience = () => {
             <div>
               <h3 className="text-xl font-semibold">Python Developer at Visible One, HK</h3>
               <p className="text-sm text-gray-400">2023 Feb - 2023 Jul</p>
-              <p className="mt-2">
-                Contributed to backend development using Python Django and Flask. I have gained practical knowledge in Python threading, API development, and server management.
-              </p>
+              <ul className="mt-2 list-disc pl-5 text-gray-400">
+                <li>Contributed to backend development using Python Django and Flask.</li>
+                <li>Gained practical knowledge in Python threading.</li>
+                <li>Worked on API development and server management tasks.</li>
+              </ul>
             </div>
           </motion.div>
         </div>
