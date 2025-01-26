@@ -75,6 +75,7 @@ function generatePrompt(cvData, userMessage) {
     
     Name: ${cvData.name}
     Gender: ${cvData.gender}
+    Marital status: ${cvData.relationship_status}
     Role: ${cvData.role}
     Skills: ${cvData.skills.join(", ")}
     
