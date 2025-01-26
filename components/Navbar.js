@@ -14,6 +14,7 @@ const Navbar = () => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id); // Update the active section when it enters the viewport
+
           }
         });
       },
@@ -31,9 +32,11 @@ const Navbar = () => {
   }, []);
 
   // Function to close the menu when a link is clicked
-  const handleLinkClick = () => {
-    setMenuOpen(false); // Close the menu
+  const handleLinkClick = (sectionId) => {
+    setActiveSection(sectionId);
+    setMenuOpen(false);
   };
+
 
   return (
     <nav className="bg-gray-900 text-white fixed w-full z-50">
@@ -97,44 +100,40 @@ const Navbar = () => {
           <div className="flex flex-col items-center space-y-4">
             <Link
               href="#home"
-              className={`${activeSection === 'home' ? 'text-[#8c6fc4]' : 'text-white'
-                } hover:text-[#a78ec8]`}
-              onClick={handleLinkClick} // Close the menu on link click
+              className={`${activeSection === 'home' ? 'text-[#8c6fc4]' : 'text-white'} hover:text-[#a78ec8]`}
+              onClick={() => handleLinkClick('home')}
             >
               Home
             </Link>
             <Link
               href="#about"
-              className={`${activeSection === 'about' ? 'text-[#8c6fc4]' : 'text-white'
-                } hover:text-[#a78ec8]`}
-              onClick={handleLinkClick} // Close the menu on link click
+              className={`${activeSection === 'about' ? 'text-[#8c6fc4]' : 'text-white'} hover:text-[#a78ec8]`}
+              onClick={() => handleLinkClick('about')}
             >
               About
             </Link>
             <Link
               href="#projects"
-              className={`${activeSection === 'projects' ? 'text-[#8c6fc4]' : 'text-white'
-                } hover:text-[#a78ec8]`}
-              onClick={handleLinkClick} // Close the menu on link click
+              className={`${activeSection === 'projects' ? 'text-[#8c6fc4]' : 'text-white'} hover:text-[#a78ec8]`}
+              onClick={() => handleLinkClick('projects')}
             >
               Projects
             </Link>
             <Link
               href="#experience"
-              className={`${activeSection === 'experience' ? 'text-[#8c6fc4]' : 'text-white'
-                } hover:text-[#a78ec8]`}
-              onClick={handleLinkClick} // Close the menu on link click
+              className={`${activeSection === 'experience' ? 'text-[#8c6fc4]' : 'text-white'} hover:text-[#a78ec8]`}
+              onClick={() => handleLinkClick('experience')}
             >
               Experience
             </Link>
             <Link
               href="#contact"
-              className={`${activeSection === 'contact' ? 'text-[#8c6fc4]' : 'text-white'
-                } hover:text-[#a78ec8]`}
-              onClick={handleLinkClick} // Close the menu on link click
+              className={`${activeSection === 'contact' ? 'text-[#8c6fc4]' : 'text-white'} hover:text-[#a78ec8]`}
+              onClick={() => handleLinkClick('contact')}
             >
               Contact
             </Link>
+
           </div>
         </motion.div>
       )}
