@@ -34,8 +34,8 @@ const projects_data = [
         "id": 4,
         "image": "projects/reservemytable.png",
         "name": "ReserveMyTable",
-        "source": "",
-        "demo": "",
+        "source": "https://github.com/khainghsuthwe/restaurant_booking_frontend",
+        "demo": "https://restaurant-booking-frontend-rho.vercel.app/",
         "description": "Restaurant reservation system that allows users to book tables at restaurants. Users can view available restaurants, make reservations, and manage their bookings.",
         "type": "Web",
         "tags": ["Nextjs", "Oauth", "Swiper"]
