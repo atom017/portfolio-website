@@ -32,13 +32,13 @@ const projects_data = [
     },
     {
         "id": 4,
-        "image": "projects/heart_disease_predict.png",
-        "name": "Heart Disease Prediction",
+        "image": "projects/reservemytable.png",
+        "name": "ReserveMyTable",
         "source": "",
         "demo": "",
-        "description": "A simple machine learning program that utilizes patient's information to predict one can happen heart-disease or not.",
-        "type": "AI",
-        "tags": ["Classification", "Scikit-learn", "Streamlit"]
+        "description": "Restaurant reservation system that allows users to book tables at restaurants. Users can view available restaurants, make reservations, and manage their bookings.",
+        "type": "Web",
+        "tags": ["Nextjs", "Oauth", "Swiper"]
     },
 
     {
