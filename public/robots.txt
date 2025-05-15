@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://khainghsuthwe.vercel.app
+
+# Sitemaps
+Sitemap: https://khainghsuthwe.vercel.app/sitemap.xml
