@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://khainghsuthwe.vercel.app", // Replace with your Vercel domain
+  siteUrl: "https://khaing-hsu-thwe.vercel.app", // Replace with your Vercel domain
   generateRobotsTxt: true,
   sitemapSize: 7000,
   changefreq: "daily",

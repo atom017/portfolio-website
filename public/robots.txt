@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://khainghsuthwe.vercel.app
+Host: https://khaing-hsu-thwe.vercel.app
 
 # Sitemaps
-Sitemap: https://khainghsuthwe.vercel.app/sitemap.xml
+Sitemap: https://khaing-hsu-thwe.vercel.app/sitemap.xml
