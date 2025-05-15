@@ -9,6 +9,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>Khaing Hsu Thwe</title>
         <link rel="icon" href="/name/white.svg" type="image/svg+xml" />
+        <meta name="google-site-verification" content="googlef51540a66b88dfad.html" />
       </Head>
       <DefaultSeo
         titleTemplate="%s | Khaing Hsu Thwe"
