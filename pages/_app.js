@@ -15,17 +15,17 @@ export default function App({ Component, pageProps }) {
         titleTemplate="%s | Khaing Hsu Thwe"
         defaultTitle="Khaing Hsu Thwe - Portfolio"
         description="Portfolio of Khaing Hsu Thwe, showcasing projects, experience, and contact information."
-        canonical="https://khainghsuthwe.vercel.app" // Replace with your Vercel domain
+        canonical="https://khaing-hsu-thwe.vercel.app" 
         openGraph={{
           type: "website",
           locale: "en_US",
-          url: "https://www.khainghsuthwe.vercel.app",
+          url: "https://www.khaing-hsu-thwe.vercel.app",
           siteName: "Khaing Hsu Thwe Portfolio",
           title: "Khaing Hsu Thwe - Portfolio",
           description: "Portfolio of Khaing Hsu Thwe, showcasing projects, experience, and contact information.",
           images: [
             {
-              url: "https://khainghsuthwe.vercel.app/KHT.png", // Replace with your image path
+              url: "https://khaing-hsu-thwe.vercel.app/KHT.png", 
               width: 1200,
               height: 630,
               alt: "Khaing Hsu Thwe Portfolio",

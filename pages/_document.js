@@ -12,7 +12,7 @@ export default function Document() {
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Khaing Hsu Thwe",
-              url: "https://khainghsuthwe.vercel.app",
+              url: "https://khaing-hsu-thwe.vercel.app",
               sameAs: [
                 "https://www.linkedin.com/in/khaing-hsu-thwe", 
                 "https://github.com/khainghsuthwe",
